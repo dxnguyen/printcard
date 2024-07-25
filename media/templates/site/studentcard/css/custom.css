@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'UTM-HelvstIns';
+    src: url('../fonts/00119-UTM-HelvetIns.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header.container-header{ background-color: rgb(61, 81, 140) !important; background-image: none !important; }
+.header-right-box{ width:100px; position: relative; float: right; padding:30px; text-align: center; }
+.header-right-box .user-state{ position: absolute; bottom:0px; font-size: 20px; color:#ccc; }
+.sv-image{ width:80%; margin:10px auto;}
+h2.text-name{ text-align:center; color:rgb(61, 81, 140) !important;}
+table.svinfo tr th{ background-color: #f7f7f7;}
+table.svinfo tr .sv-name{ background-color: inherit !important;}
+.mod-footer{ margin: 0 auto; text-align: center; color: #ccc;}
+.data-not-exist{position: relative; padding: 20px; text-align: center;}
+.data-not-exist h4{ margin: 0 auto; color:#ccc;}
+.footer .grid-child{ padding: 1rem 0.5em !important;}
+.footer .grid-child .hotline{ margin-bottom: 0;}
+
+/** css for Print Card **/
+.text-sitename { margin-left: 90px;}
+#cardBox { width: 800px; margin: 20px auto; background-color: rgba(41,84,149,0.92); position: relative; overflow: hidden; padding: 0 0 50px 0; border-radius: 10px;-moz-border-radius: 10px;}
+.controlbox { width: 100%; position: relative; overflow: hidden; padding: 10px; margin-bottom: 50px; background-color:rgba(17,52,149,0.92); color: #ffffff;}
+.controlbox #printBtn { padding: 5px 15px;}
+
+
+.frameCard { position: relative; overflow: hidden; width: 86mm; height: 54mm; display: flex;/*border: 1px solid #ccc;*/border-radius: 5px;background-color: #ffffff; margin: 0 auto; padding-left: 20px; }
+.studentCard {
+    position: relative;
+    width: 86mm;
+    height: 38mm;
+    margin-top: 12%;
+    margin-bottom: 6.5%;
+    /*padding: 5px;*/
+    overflow: hidden;
+    /*border: 1px solid #ccc;*/
+}
+
+.infobox { width:100%; position: relative; display: flex; height: 27mm;}
+.codebox { width: 100%; position: absolute; bottom: 3px; display: flex;}
+.img-barcode {
+    position: relative;
+    width: 35%;
+    display: flex;
+}
+.contain-img-box { align-items: flex-end;}
+
+.studentCard .imgBox {
+    position: relative;
+    width: 60px;
+    height: 90px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+}
+.studentCard .imgBox img{ max-width: 100%; margin: 0 auto; }
+
+
+#draggable-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 0, 0, 0.6);
+    display: none;
+    pointer-events: none;
+}
+
+.studentCard .studentInfo {
+    width: 70%;
+    font-size: 9px;
+    margin-left: -10px;
+    /*line-height: 1.6;*/
+}
+
+.margin-info { margin-top: 30px; }
+
+.studentCard .studentInfo h4 {
+    font-family: "Times New Roman";
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.studentCard .studentInfo p {
+    font-family: UTM-HelvstIns;
+    color: #000050;
+    margin-bottom: 4px;
+}
+
+.studentCard .studentInfo p > span {
+    font-weight: bold;
+    font-size: 10px;
+    padding-left: 4px;
+}
+.studentCard .studentInfo p .fullName { text-transform: uppercase; font-size: 12px; padding-left:36px !important; }
+.birthday {  padding-left:38px !important;}
+.school { display: inline-flex;  padding-left:48px !important; }
+.barcode, .qrcode {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.barcode img {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    /*max-width: 90%;*/
+}
+
+.qrcode img {
+    height: 30px;
+    position: relative;
+    float: right !important;
+    margin-right: 15px;
+}
+
+/** zoom image **/
+#draggable-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#draggable-image.zoomed {
+    transform: scale(1.5);
+    cursor: zoom-out;
+}
+/*****/
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #printCard { margin: 0 auto;}
+    #printCard, #printCard * {
+        visibility: visible;
+    }
+
+    #printCard {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+}
+/*******End print card ***************/
+
+@media (max-width: 768px) {
+    h2.text-name { font-size: 25px !important; }
+}
+
+@media (max-width: 576px) {
+    .container-header .navbar-brand{ padding-top:0 !important; }
+    .container-header .navbar-brand a img{ max-width:45%; }
+    .footer .grid-child{ padding:0.5rem !important; }
+    .js-stools-container-bar .btn-toolbar{ flex-wrap: unset !important; }
+}

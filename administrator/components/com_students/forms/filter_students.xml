@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" description="COM_STUDENTS_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="state"
+               type="status"
+               label="COM_STUDENTS_FILTER_STATE"
+               description="COM_STUDENTS_FILTER_STATE_DESC"
+               onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field name="building_group" label="COM_STUDENTS_FORM_LBL_STUDENT_BUILDING_GROUP" type="sql" query="Select id, name from #__building_groups" header="COM_STUDENTS_STUDENTS_BUILDING_GROUP_FILTER" translate="true" key_field="id" value_field="name" onchange="this.form.submit();"/>
+<field name="building" label="COM_STUDENTS_FORM_LBL_STUDENT_BUILDING" type="sql" query="Select id, name from #__buildings where state=1" header="COM_STUDENTS_STUDENTS_BUILDING_FILTER" translate="true" key_field="id" value_field="name" onchange="this.form.submit();"/>
+<field name="birthday.from" label="COM_STUDENTS_STUDENTS_BIRTHDAY_FILTER_FROM" type="calendar" onchange="this.form.submit();" filter="safehtml" class="inputbox" showtime="false" translateformat="false" hint="COM_STUDENTS_STUDENTS_BIRTHDAY_FILTER_FROM"/>
+<field name="birthday.to" label="COM_STUDENTS_STUDENTS_BIRTHDAY_FILTER_TO" type="calendar" onchange="this.form.submit();" filter="safehtml" class="inputbox" showtime="false" translateformat="false" hint="COM_STUDENTS_STUDENTS_BIRTHDAY_FILTER_TO"/>
+
+
+    </fields>
+
+    <fields name="list">
+
+        <field name="fullordering"
+               type="list"
+               label="COM_STUDENTS_LIST_FULL_ORDERING"
+               description="COM_STUDENTS_LIST_FULL_ORDERING_DESC"
+               onchange="this.form.submit();"
+               default="a.id DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.id ASC">COM_STUDENTS_ID_ASC</option><option value="a.id DESC">COM_STUDENTS_ID_DESC</option><option value="a.state ASC">COM_STUDENTS_STATE_ASC</option><option value="a.state DESC">COM_STUDENTS_STATE_DESC</option><option value="a.ordering ASC">COM_STUDENTS_ORDERING_ASC</option><option value="a.ordering DESC">COM_STUDENTS_ORDERING_DESC</option><option value="a.masv ASC">COM_STUDENTS_MASV_ASC</option><option value="a.masv DESC">COM_STUDENTS_MASV_DESC</option><option value="a.cccd ASC">COM_STUDENTS_CCCD_ASC</option><option value="a.cccd DESC">COM_STUDENTS_CCCD_DESC</option><option value="a.name ASC">COM_STUDENTS_NAME_ASC</option><option value="a.name DESC">COM_STUDENTS_NAME_DESC</option><option value="a.shool_name ASC">COM_STUDENTS_SHOOL_NAME_ASC</option><option value="a.shool_name DESC">COM_STUDENTS_SHOOL_NAME_DESC</option><option value="a.image ASC">COM_STUDENTS_IMAGE_ASC</option><option value="a.image DESC">COM_STUDENTS_IMAGE_DESC</option><option value="a.address ASC">COM_STUDENTS_ADDRESS_ASC</option><option value="a.address DESC">COM_STUDENTS_ADDRESS_DESC</option><option value="a.building_group ASC">COM_STUDENTS_BUILDING_GROUP_ASC</option><option value="a.building_group DESC">COM_STUDENTS_BUILDING_GROUP_DESC</option><option value="a.building ASC">COM_STUDENTS_BUILDING_ASC</option><option value="a.building DESC">COM_STUDENTS_BUILDING_DESC</option><option value="a.room ASC">COM_STUDENTS_ROOM_ASC</option><option value="a.room DESC">COM_STUDENTS_ROOM_DESC</option><option value="a.birthday ASC">COM_STUDENTS_BIRTHDAY_ASC</option><option value="a.birthday DESC">COM_STUDENTS_BIRTHDAY_DESC</option><option value="a.phone ASC">COM_STUDENTS_PHONE_ASC</option><option value="a.phone DESC">COM_STUDENTS_PHONE_DESC</option>
+
+        </field>
+
+       <field name="limit"
+               type="limitbox"
+               label="COM_STUDENTS_LIST_LIMIT"
+               description="COM_STUDENTS_LIST_LIMIT_DESC"
+               class="input-mini"
+               default="25"
+               onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>

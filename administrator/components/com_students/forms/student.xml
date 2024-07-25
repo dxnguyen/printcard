@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Student\Component\Students\Administrator\Field">
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="ordering"/>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_DESC" hidden="true" hint="COM_STUDENTS_FORM_LBL_STUDENT_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" description="JGLOBAL_FIELD_MODIFIED_BY_DESC" hidden="true" hint="COM_STUDENTS_FORM_LBL_STUDENT_MODIFIED_BY"/>
+    <field name="masv" required="true" message="Trường này không được để trống" label="COM_STUDENTS_FORM_LBL_STUDENT_MASV" description="COM_STUDENTS_FORM_DESC_STUDENT_MASV" hint="COM_STUDENTS_FORM_LBL_STUDENT_MASV"/>
+    <field name="cccd" required="true" message="Trường này không được để trống" label="COM_STUDENTS_FORM_LBL_STUDENT_CCCD" description="COM_STUDENTS_FORM_DESC_STUDENT_CCCD" hint="COM_STUDENTS_FORM_LBL_STUDENT_CCCD"/>
+    <field name="name" filter="safehtml" type="text" required="true" message="Trường này không được để trống" translateLabel="true" label="COM_STUDENTS_FORM_LBL_STUDENT_NAME" description="COM_STUDENTS_FORM_DESC_STUDENT_NAME" hint="COM_STUDENTS_FORM_LBL_STUDENT_NAME"/>
+    <field name="shool_name" filter="safehtml" type="text" required="true" message="Trường này không được để trống" translateLabel="true" label="COM_STUDENTS_FORM_LBL_STUDENT_SHOOL_NAME" description="COM_STUDENTS_FORM_DESC_STUDENT_SHOOL_NAME" hint="COM_STUDENTS_FORM_LBL_STUDENT_SHOOL_NAME"/>
+    <field name="image" filter="safehtml" type="text" label="COM_STUDENTS_FORM_LBL_STUDENT_IMAGE" description="COM_STUDENTS_FORM_DESC_STUDENT_IMAGE" hint="COM_STUDENTS_FORM_LBL_STUDENT_IMAGE"/>
+    <field name="address" filter="safehtml" type="text" translateLabel="true" label="COM_STUDENTS_FORM_LBL_STUDENT_ADDRESS" description="COM_STUDENTS_FORM_DESC_STUDENT_ADDRESS" hint="COM_STUDENTS_FORM_LBL_STUDENT_ADDRESS"/>
+    <field name="building_group" query="Select id, name from #__building_groups" key_field="id" value_field="name" type="sql" layout="joomla.form.field.list-fancy-select" required="true" message="Trường này không được để trống" label="COM_STUDENTS_FORM_LBL_STUDENT_BUILDING_GROUP" description="COM_STUDENTS_FORM_DESC_STUDENT_BUILDING_GROUP" hint="COM_STUDENTS_FORM_LBL_STUDENT_BUILDING_GROUP"/>
+    <field name="building" query="Select id, name from #__buildings where state=1" key_field="id" value_field="name" type="sql" layout="joomla.form.field.list-fancy-select" label="COM_STUDENTS_FORM_LBL_STUDENT_BUILDING" description="COM_STUDENTS_FORM_DESC_STUDENT_BUILDING" hint="COM_STUDENTS_FORM_LBL_STUDENT_BUILDING"/>
+    <field name="room" filter="safehtml" type="text" translateLabel="true" label="COM_STUDENTS_FORM_LBL_STUDENT_ROOM" description="COM_STUDENTS_FORM_DESC_STUDENT_ROOM" hint="COM_STUDENTS_FORM_LBL_STUDENT_ROOM"/>
+    <field name="birthday" class="inputbox" format="%Y-%m-%d" timeformat="24" filter="server_utc" translateformat="false" showtime="false" singleheader="false" todaybutton="false" weeknumbers="false" filltable="false" type="calendar" label="COM_STUDENTS_FORM_LBL_STUDENT_BIRTHDAY" description="COM_STUDENTS_FORM_DESC_STUDENT_BIRTHDAY" hint="COM_STUDENTS_FORM_LBL_STUDENT_BIRTHDAY"/>
+    <field name="phone" maxlength="11" filter="safehtml" type="tel" label="COM_STUDENTS_FORM_LBL_STUDENT_PHONE" description="COM_STUDENTS_FORM_DESC_STUDENT_PHONE" hint="COM_STUDENTS_FORM_LBL_STUDENT_PHONE"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+  <fieldset name="accesscontrol">
+    <field name="asset_id" type="hidden" filter="unset"/>
+    <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules" validate="rules" class="inputbox" component="com_students" section="student"/>
+  </fieldset>
+</form>

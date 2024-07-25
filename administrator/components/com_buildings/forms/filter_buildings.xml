@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" description="COM_BUILDINGS_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="state"
+               type="status"
+               label="COM_BUILDINGS_FILTER_STATE"
+               description="COM_BUILDINGS_FILTER_STATE_DESC"
+               onchange="this.form.submit();"
+        >
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+
+        <field name="building_group" label="COM_BUILDINGS_FORM_LBL_BUILDING_BUILDING_GROUP" type="sql" query="select id,name from #__building_groups where state=1" header="COM_BUILDINGS_BUILDINGS_BUILDING_GROUP_FILTER" translate="true" key_field="id" value_field="name" onchange="this.form.submit();"/>
+
+
+    </fields>
+
+    <fields name="list">
+
+        <field name="fullordering"
+               type="list"
+               label="COM_BUILDINGS_LIST_FULL_ORDERING"
+               description="COM_BUILDINGS_LIST_FULL_ORDERING_DESC"
+               onchange="this.form.submit();"
+               default="a.id DESC"
+        >
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="a.id ASC">COM_BUILDINGS_ID_ASC</option><option value="a.id DESC">COM_BUILDINGS_ID_DESC</option><option value="a.state ASC">COM_BUILDINGS_STATE_ASC</option><option value="a.state DESC">COM_BUILDINGS_STATE_DESC</option><option value="a.ordering ASC">COM_BUILDINGS_ORDERING_ASC</option><option value="a.ordering DESC">COM_BUILDINGS_ORDERING_DESC</option><option value="a.name ASC">COM_BUILDINGS_NAME_ASC</option><option value="a.name DESC">COM_BUILDINGS_NAME_DESC</option><option value="a.building_group ASC">COM_BUILDINGS_BUILDING_GROUP_ASC</option><option value="a.building_group DESC">COM_BUILDINGS_BUILDING_GROUP_DESC</option>
+
+        </field>
+
+       <field name="limit"
+               type="limitbox"
+               label="COM_BUILDINGS_LIST_LIMIT"
+               description="COM_BUILDINGS_LIST_LIMIT_DESC"
+               class="input-mini"
+               default="25"
+               onchange="this.form.submit();"
+        />
+
+    </fields>
+
+</form>
