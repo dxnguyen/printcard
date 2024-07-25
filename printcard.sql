@@ -14,7 +14,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Dumping structure for table gatecard.w5f25_action_logs
+-- Dumping structure for table princard.w5f25_action_logs
 CREATE TABLE IF NOT EXISTS `w5f25_action_logs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `message_language_key` varchar(255) NOT NULL DEFAULT '',
@@ -29,9 +29,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_action_logs` (
   KEY `idx_user_id_logdate` (`user_id`,`log_date`),
   KEY `idx_user_id_extension` (`user_id`,`extension`),
   KEY `idx_extension_item_id` (`extension`,`item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=506 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=582 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_action_logs: ~424 rows (approximately)
+-- Dumping data for table princard.w5f25_action_logs: ~536 rows (approximately)
 REPLACE INTO `w5f25_action_logs` (`id`, `message_language_key`, `message`, `log_date`, `extension`, `user_id`, `item_id`, `ip_address`) VALUES
 	(1, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2023-09-14 08:43:17', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
 	(2, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2023-09-14 08:49:07', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
@@ -537,16 +537,92 @@ REPLACE INTO `w5f25_action_logs` (`id`, `message_language_key`, `message`, `log_
 	(502, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2024-04-09 04:28:10', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
 	(503, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{"action":"install","type":"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT","id":244,"name":"com_requests","extension_name":"com_requests","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-04-09 04:28:38', 'com_installer', 80, 244, 'COM_ACTIONLOGS_DISABLED'),
 	(504, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2024-07-19 09:23:21', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
-	(505, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-19 09:24:15', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED');
+	(505, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-19 09:24:15', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(506, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2024-07-22 06:49:20', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(507, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-22 06:49:27', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(508, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__menu"}', '2024-07-22 06:55:29', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(509, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{"action":"logout","id":80,"userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-22 06:55:45', 'com_users', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(510, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-22 06:55:49', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(511, 'PLG_ACTIONLOG_JOOMLA_USER_CACHE', '{"action":"cache","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","group":"all"}', '2024-07-22 06:56:27', 'com_cache', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(512, 'PLG_ACTIONLOG_JOOMLA_USER_CACHE', '{"action":"cache","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","group":"all"}', '2024-07-22 06:56:31', 'com_cache', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(513, 'PLG_ACTIONLOG_JOOMLA_USER_CACHE', '{"action":"cache","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","group":"all"}', '2024-07-22 06:56:34', 'com_cache', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(514, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM","id":115,"title":"\\u0110\\u0103ng nh\\u1eadp","itemlink":"index.php?option=com_menus&task=item.edit&id=115","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-22 06:57:03', 'com_menus.item', 80, 115, 'COM_ACTIONLOGS_DISABLED'),
+	(515, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__menu"}', '2024-07-22 06:57:03', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(516, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM","id":115,"title":"\\u0110\\u0103ng nh\\u1eadp","itemlink":"index.php?option=com_menus&task=item.edit&id=115","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-22 06:57:05', 'com_menus.item', 80, 115, 'COM_ACTIONLOGS_DISABLED'),
+	(517, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM","id":101,"title":"Welcome to KTX \\u0110HQG-HCM.","itemlink":"index.php?option=com_menus&task=item.edit&id=101","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-22 06:57:22', 'com_menus.item', 80, 101, 'COM_ACTIONLOGS_DISABLED'),
+	(518, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__menu"}', '2024-07-22 06:57:22', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(519, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM","id":116,"title":"\\u0110\\u0103ng xu\\u1ea5t","itemlink":"index.php?option=com_menus&task=item.edit&id=116","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-22 06:57:29', 'com_menus.item', 80, 116, 'COM_ACTIONLOGS_DISABLED'),
+	(520, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__menu"}', '2024-07-22 06:57:29', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(521, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-22 07:27:11', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(522, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2024-07-22 07:30:31', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(523, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__extensions"}', '2024-07-22 07:30:48', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(524, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN","id":"171","title":"plg_system_httpheaders","extension_name":"plg_system_httpheaders","itemlink":"index.php?option=com_plugins&task=plugin.edit&extension_id=171","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-22 07:31:05', 'com_plugins.plugin', 80, 171, 'COM_ACTIONLOGS_DISABLED'),
+	(525, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__extensions"}', '2024-07-22 07:31:05', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(526, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN","id":"171","title":"plg_system_httpheaders","extension_name":"plg_system_httpheaders","itemlink":"index.php?option=com_plugins&task=plugin.edit&extension_id=171","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-22 07:31:29', 'com_plugins.plugin', 80, 171, 'COM_ACTIONLOGS_DISABLED'),
+	(527, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__extensions"}', '2024-07-22 07:31:29', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(528, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-22 07:49:45', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(529, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-23 00:34:46', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(530, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2024-07-23 01:52:48', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(531, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__menu"}', '2024-07-23 02:05:23', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(532, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__request_types"}', '2024-07-23 02:05:39', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(533, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-23 02:37:30', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(534, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-23 03:58:25', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(535, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-23 06:29:52', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(536, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-23 06:52:37', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(537, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-23 07:30:07', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(538, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-23 08:25:25', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(539, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-23 21:38:29', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(540, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-24 00:37:22', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(541, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-24 02:15:00', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(542, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-24 03:07:12', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(543, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2024-07-24 03:28:54', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(544, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__gernerals"}', '2024-07-24 03:30:07', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(545, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__gernerals"}', '2024-07-24 03:30:21', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(546, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-24 03:49:35', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(547, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-24 04:15:05', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(548, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-24 06:23:23', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(549, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-24 07:30:40', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(550, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-24 22:34:05', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(551, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 00:35:38', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(552, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 01:11:12', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(553, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 03:18:20', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(554, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 04:19:30', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(555, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 04:26:30', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(556, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 04:31:24', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(557, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 04:32:01', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(558, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 06:16:09', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(559, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2024-07-25 06:16:41', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(560, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN","id":"171","title":"plg_system_httpheaders","extension_name":"plg_system_httpheaders","itemlink":"index.php?option=com_plugins&task=plugin.edit&extension_id=171","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 06:20:56', 'com_plugins.plugin', 80, 171, 'COM_ACTIONLOGS_DISABLED'),
+	(561, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__extensions"}', '2024-07-25 06:20:56', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(562, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN","id":"171","title":"plg_system_httpheaders","extension_name":"plg_system_httpheaders","itemlink":"index.php?option=com_plugins&task=plugin.edit&extension_id=171","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 06:22:13', 'com_plugins.plugin', 80, 171, 'COM_ACTIONLOGS_DISABLED'),
+	(563, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__extensions"}', '2024-07-25 06:22:13', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(564, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN","id":"171","title":"plg_system_httpheaders","extension_name":"plg_system_httpheaders","itemlink":"index.php?option=com_plugins&task=plugin.edit&extension_id=171","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 06:22:36', 'com_plugins.plugin', 80, 171, 'COM_ACTIONLOGS_DISABLED'),
+	(565, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__extensions"}', '2024-07-25 06:22:36', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(566, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN","id":"171","title":"plg_system_httpheaders","extension_name":"plg_system_httpheaders","itemlink":"index.php?option=com_plugins&task=plugin.edit&extension_id=171","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 06:22:54', 'com_plugins.plugin', 80, 171, 'COM_ACTIONLOGS_DISABLED'),
+	(567, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__extensions"}', '2024-07-25 06:22:54', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(568, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{"action":"checkin","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":80,"title":"admin","itemlink":"index.php?option=com_users&task=user.edit&id=80","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","table":"#__extensions"}', '2024-07-25 07:43:07', 'com_checkin', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(569, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{"action":"logout","id":80,"userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 07:56:11', 'com_users', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(570, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 07:56:14', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(571, 'PLG_ACTIONLOG_JOOMLA_APPLICATION_CONFIG_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_APPLICATION_CONFIG","extension_name":"com_config.application","itemlink":"index.php?option=com_config","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 08:08:49', 'com_config.application', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(572, 'PLG_ACTIONLOG_JOOMLA_APPLICATION_CONFIG_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_APPLICATION_CONFIG","extension_name":"com_config.application","itemlink":"index.php?option=com_config","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 08:09:04', 'com_config.application', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(573, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 08:38:03', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(574, 'PLG_ACTIONLOG_JOOMLA_APPLICATION_CONFIG_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_APPLICATION_CONFIG","extension_name":"com_config.application","itemlink":"index.php?option=com_config","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 08:40:05', 'com_config.application', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(575, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":81,"title":"Manager","itemlink":"index.php?option=com_users&task=user.edit&id=81","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 08:41:02', 'com_users', 80, 81, 'COM_ACTIONLOGS_DISABLED'),
+	(576, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":82,"title":"Printer","itemlink":"index.php?option=com_users&task=user.edit&id=82","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 08:45:36', 'com_users', 80, 82, 'COM_ACTIONLOGS_DISABLED'),
+	(577, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{"action":"logout","id":80,"userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 08:46:49', 'com_users', 80, 80, 'COM_ACTIONLOGS_DISABLED'),
+	(578, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":82,"username":"pcntt","accountlink":"index.php?option=com_users&task=user.edit&id=82","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 08:47:48', 'com_users', 82, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(579, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR"}', '2024-07-25 09:30:08', 'com_users', 80, 0, 'COM_ACTIONLOGS_DISABLED'),
+	(580, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{"action":"update","type":"PLG_ACTIONLOG_JOOMLA_TYPE_USER","id":82,"title":"Printer","itemlink":"index.php?option=com_users&task=user.edit&id=82","userid":80,"username":"admin","accountlink":"index.php?option=com_users&task=user.edit&id=80"}', '2024-07-25 09:30:29', 'com_users', 80, 82, 'COM_ACTIONLOGS_DISABLED'),
+	(581, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{"action":"login","userid":82,"username":"cntt","accountlink":"index.php?option=com_users&task=user.edit&id=82","app":"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE"}', '2024-07-25 09:30:51', 'com_users', 82, 0, 'COM_ACTIONLOGS_DISABLED');
 
--- Dumping structure for table gatecard.w5f25_action_logs_extensions
+-- Dumping structure for table princard.w5f25_action_logs_extensions
 CREATE TABLE IF NOT EXISTS `w5f25_action_logs_extensions` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `extension` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_action_logs_extensions: ~19 rows (approximately)
+-- Dumping data for table princard.w5f25_action_logs_extensions: ~19 rows (approximately)
 REPLACE INTO `w5f25_action_logs_extensions` (`id`, `extension`) VALUES
 	(1, 'com_banners'),
 	(2, 'com_cache'),
@@ -568,7 +644,7 @@ REPLACE INTO `w5f25_action_logs_extensions` (`id`, `extension`) VALUES
 	(18, 'com_checkin'),
 	(19, 'com_scheduler');
 
--- Dumping structure for table gatecard.w5f25_action_logs_users
+-- Dumping structure for table princard.w5f25_action_logs_users
 CREATE TABLE IF NOT EXISTS `w5f25_action_logs_users` (
   `user_id` int(10) unsigned NOT NULL,
   `notify` tinyint(3) unsigned NOT NULL,
@@ -577,11 +653,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_action_logs_users` (
   KEY `idx_notify` (`notify`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_action_logs_users: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_action_logs_users: ~0 rows (approximately)
 REPLACE INTO `w5f25_action_logs_users` (`user_id`, `notify`, `extensions`) VALUES
 	(80, 0, '["com_content"]');
 
--- Dumping structure for table gatecard.w5f25_action_log_config
+-- Dumping structure for table princard.w5f25_action_log_config
 CREATE TABLE IF NOT EXISTS `w5f25_action_log_config` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type_title` varchar(255) NOT NULL DEFAULT '',
@@ -593,7 +669,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_action_log_config` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_action_log_config: ~20 rows (approximately)
+-- Dumping data for table princard.w5f25_action_log_config: ~20 rows (approximately)
 REPLACE INTO `w5f25_action_log_config` (`id`, `type_title`, `type_alias`, `id_holder`, `title_holder`, `table_name`, `text_prefix`) VALUES
 	(1, 'article', 'com_content.article', 'id', 'title', '#__content', 'PLG_ACTIONLOG_JOOMLA'),
 	(2, 'article', 'com_content.form', 'id', 'title', '#__content', 'PLG_ACTIONLOG_JOOMLA'),
@@ -616,7 +692,7 @@ REPLACE INTO `w5f25_action_log_config` (`id`, `type_title`, `type_alias`, `id_ho
 	(19, 'application_config', 'com_config.application', '', 'name', '', 'PLG_ACTIONLOG_JOOMLA'),
 	(20, 'task', 'com_scheduler.task', 'id', 'title', '#__scheduler_tasks', 'PLG_ACTIONLOG_JOOMLA');
 
--- Dumping structure for table gatecard.w5f25_assets
+-- Dumping structure for table princard.w5f25_assets
 CREATE TABLE IF NOT EXISTS `w5f25_assets` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set parent.',
@@ -632,7 +708,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_assets` (
   KEY `idx_parent_id` (`parent_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=127 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_assets: ~107 rows (approximately)
+-- Dumping data for table princard.w5f25_assets: ~108 rows (approximately)
 REPLACE INTO `w5f25_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
 	(1, 0, 0, 215, 0, 'root.1', 'Root Asset', '{"core.login.site":{"6":1,"2":1},"core.login.admin":{"6":1},"core.login.api":{"8":1},"core.login.offline":{"6":1},"core.admin":{"8":1},"core.manage":{"7":1},"core.create":{"6":1,"3":1},"core.delete":{"6":1},"core.edit":{"6":1,"4":1},"core.edit.state":{"6":1,"5":1},"core.edit.own":{"6":1,"3":1}}'),
 	(2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
@@ -743,7 +819,7 @@ REPLACE INTO `w5f25_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `
 	(125, 124, 210, 211, 2, 'com_request_types.request_type.1', 'com_request_types.request_type.1', '{}'),
 	(126, 1, 213, 214, 1, 'com_requests', 'com_requests', '{}');
 
--- Dumping structure for table gatecard.w5f25_associations
+-- Dumping structure for table princard.w5f25_associations
 CREATE TABLE IF NOT EXISTS `w5f25_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',
   `context` varchar(50) NOT NULL COMMENT 'The context of the associated item.',
@@ -752,9 +828,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_associations` (
   KEY `idx_key` (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_associations: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_associations: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_banners
+-- Dumping structure for table princard.w5f25_banners
 CREATE TABLE IF NOT EXISTS `w5f25_banners` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` int(11) NOT NULL DEFAULT 0,
@@ -798,9 +874,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_banners` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_banners: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_banners: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_banner_clients
+-- Dumping structure for table princard.w5f25_banner_clients
 CREATE TABLE IF NOT EXISTS `w5f25_banner_clients` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
@@ -821,9 +897,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_banner_clients` (
   KEY `idx_metakey_prefix` (`metakey_prefix`(100))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_banner_clients: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_banner_clients: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_banner_tracks
+-- Dumping structure for table princard.w5f25_banner_tracks
 CREATE TABLE IF NOT EXISTS `w5f25_banner_tracks` (
   `track_date` datetime NOT NULL,
   `track_type` int(10) unsigned NOT NULL,
@@ -835,9 +911,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_banner_tracks` (
   KEY `idx_banner_id` (`banner_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_banner_tracks: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_banner_tracks: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_buildings
+-- Dumping structure for table princard.w5f25_buildings
 CREATE TABLE IF NOT EXISTS `w5f25_buildings` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -853,13 +929,13 @@ CREATE TABLE IF NOT EXISTS `w5f25_buildings` (
   KEY `w5f25_buildings_name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_buildings: ~3 rows (approximately)
+-- Dumping data for table princard.w5f25_buildings: ~3 rows (approximately)
 REPLACE INTO `w5f25_buildings` (`id`, `asset_id`, `state`, `ordering`, `checked_out`, `checked_out_time`, `created_by`, `modified_by`, `name`, `building_group`) VALUES
 	(1, 108, 1, 1, NULL, NULL, 80, 80, 'BA1', '1'),
 	(2, 109, 1, 2, NULL, NULL, 80, 80, 'BA2', '1'),
 	(3, 110, 1, 3, NULL, NULL, 80, 80, 'BD1', '3');
 
--- Dumping structure for table gatecard.w5f25_building_groups
+-- Dumping structure for table princard.w5f25_building_groups
 CREATE TABLE IF NOT EXISTS `w5f25_building_groups` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -874,14 +950,14 @@ CREATE TABLE IF NOT EXISTS `w5f25_building_groups` (
   KEY `w5f25_building_groups_name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_building_groups: ~4 rows (approximately)
+-- Dumping data for table princard.w5f25_building_groups: ~4 rows (approximately)
 REPLACE INTO `w5f25_building_groups` (`id`, `asset_id`, `state`, `ordering`, `checked_out`, `checked_out_time`, `created_by`, `modified_by`, `name`) VALUES
 	(1, 104, 1, 1, NULL, NULL, 80, 80, 'BA'),
 	(2, 105, 1, 2, NULL, NULL, 80, 80, 'BC'),
 	(3, 106, 1, 3, NULL, NULL, 80, 80, 'BD'),
 	(4, 107, 1, 4, NULL, NULL, 80, 80, 'BE');
 
--- Dumping structure for table gatecard.w5f25_building_houses
+-- Dumping structure for table princard.w5f25_building_houses
 CREATE TABLE IF NOT EXISTS `w5f25_building_houses` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -896,7 +972,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_building_houses` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_building_houses: ~47 rows (approximately)
+-- Dumping data for table princard.w5f25_building_houses: ~47 rows (approximately)
 REPLACE INTO `w5f25_building_houses` (`id`, `asset_id`, `state`, `ordering`, `checked_out`, `checked_out_time`, `created_by`, `modified_by`, `house`, `cluster`) VALUES
 	(1, 0, 1, 0, NULL, NULL, 0, 0, 'A01', 'AF'),
 	(2, 0, 1, 0, NULL, NULL, 0, 0, 'A02', 'AF'),
@@ -946,7 +1022,7 @@ REPLACE INTO `w5f25_building_houses` (`id`, `asset_id`, `state`, `ordering`, `ch
 	(46, 0, 1, 0, NULL, NULL, 0, 0, 'F02', 'BE'),
 	(47, 0, 1, 0, NULL, NULL, 0, 0, 'G01', 'BE');
 
--- Dumping structure for table gatecard.w5f25_categories
+-- Dumping structure for table princard.w5f25_categories
 CREATE TABLE IF NOT EXISTS `w5f25_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
@@ -985,7 +1061,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_categories` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_categories: ~6 rows (approximately)
+-- Dumping data for table princard.w5f25_categories: ~6 rows (approximately)
 REPLACE INTO `w5f25_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `extension`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `modified_user_id`, `modified_time`, `hits`, `language`, `version`) VALUES
 	(1, 0, 0, 0, 11, 0, '', 'system', 'ROOT', 'root', '', '', 1, NULL, NULL, 1, '{}', '', '', '{}', 80, '2023-09-14 08:42:00', 80, '2023-09-14 08:42:00', 0, '*', 1),
 	(2, 27, 1, 1, 2, 1, 'uncategorised', 'com_content', 'Uncategorised', 'uncategorised', '', '', 1, NULL, NULL, 1, '{"category_layout":"","image":"","workflow_id":"use_default"}', '', '', '{"author":"","robots":""}', 80, '2023-09-14 08:42:00', 80, '2023-09-14 08:42:00', 0, '*', 1),
@@ -994,7 +1070,7 @@ REPLACE INTO `w5f25_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `l
 	(5, 30, 1, 7, 8, 1, 'uncategorised', 'com_newsfeeds', 'Uncategorised', 'uncategorised', '', '', 1, NULL, NULL, 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 80, '2023-09-14 08:42:00', 80, '2023-09-14 08:42:00', 0, '*', 1),
 	(7, 32, 1, 9, 10, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, NULL, NULL, 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 80, '2023-09-14 08:42:00', 80, '2023-09-14 08:42:00', 0, '*', 1);
 
--- Dumping structure for table gatecard.w5f25_contact_details
+-- Dumping structure for table princard.w5f25_contact_details
 CREATE TABLE IF NOT EXISTS `w5f25_contact_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -1048,9 +1124,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_contact_details` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_contact_details: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_contact_details: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_content
+-- Dumping structure for table princard.w5f25_content
 CREATE TABLE IF NOT EXISTS `w5f25_content` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
@@ -1093,9 +1169,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_content` (
   KEY `idx_alias` (`alias`(191))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_content: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_content: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_contentitem_tag_map
+-- Dumping structure for table princard.w5f25_contentitem_tag_map
 CREATE TABLE IF NOT EXISTS `w5f25_contentitem_tag_map` (
   `type_alias` varchar(255) NOT NULL DEFAULT '',
   `core_content_id` int(10) unsigned NOT NULL COMMENT 'PK from the core content table',
@@ -1109,9 +1185,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_contentitem_tag_map` (
   KEY `idx_core_content_id` (`core_content_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Maps items from content tables to tags';
 
--- Dumping data for table gatecard.w5f25_contentitem_tag_map: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_contentitem_tag_map: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_content_frontpage
+-- Dumping structure for table princard.w5f25_content_frontpage
 CREATE TABLE IF NOT EXISTS `w5f25_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT 0,
   `ordering` int(11) NOT NULL DEFAULT 0,
@@ -1120,9 +1196,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_content_frontpage` (
   PRIMARY KEY (`content_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_content_frontpage: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_content_frontpage: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_content_rating
+-- Dumping structure for table princard.w5f25_content_rating
 CREATE TABLE IF NOT EXISTS `w5f25_content_rating` (
   `content_id` int(11) NOT NULL DEFAULT 0,
   `rating_sum` int(10) unsigned NOT NULL DEFAULT 0,
@@ -1131,9 +1207,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_content_rating` (
   PRIMARY KEY (`content_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_content_rating: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_content_rating: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_content_types
+-- Dumping structure for table princard.w5f25_content_types
 CREATE TABLE IF NOT EXISTS `w5f25_content_types` (
   `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type_title` varchar(255) NOT NULL DEFAULT '',
@@ -1147,7 +1223,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_content_types` (
   KEY `idx_alias` (`type_alias`(100))
 ) ENGINE=InnoDB AUTO_INCREMENT=10007 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_content_types: ~18 rows (approximately)
+-- Dumping data for table princard.w5f25_content_types: ~20 rows (approximately)
 REPLACE INTO `w5f25_content_types` (`type_id`, `type_title`, `type_alias`, `table`, `rules`, `field_mappings`, `router`, `content_history_options`) VALUES
 	(1, 'Article', 'com_content.article', '{"special":{"dbtable":"#__content","key":"id","type":"ArticleTable","prefix":"Joomla\\\\Component\\\\Content\\\\Administrator\\\\Table\\\\","config":"array()"},"common":{"dbtable":"#__ucm_content","key":"ucm_id","type":"Corecontent","prefix":"Joomla\\\\CMS\\\\Table\\\\","config":"array()"}}', '', '{"common":{"core_content_item_id":"id","core_title":"title","core_state":"state","core_alias":"alias","core_created_time":"created","core_modified_time":"modified","core_body":"introtext", "core_hits":"hits","core_publish_up":"publish_up","core_publish_down":"publish_down","core_access":"access", "core_params":"attribs", "core_featured":"featured", "core_metadata":"metadata", "core_language":"language", "core_images":"images", "core_urls":"urls", "core_version":"version", "core_ordering":"ordering", "core_metakey":"metakey", "core_metadesc":"metadesc", "core_catid":"catid", "asset_id":"asset_id", "note":"note"}, "special":{"fulltext":"fulltext"}}', 'ContentHelperRoute::getArticleRoute', '{"formFile":"administrator\\/components\\/com_content\\/forms\\/article.xml", "hideFields":["asset_id","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time", "version", "hits", "ordering"],"convertToInt":["publish_up", "publish_down", "featured", "ordering"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"} ]}'),
 	(2, 'Contact', 'com_contact.contact', '{"special":{"dbtable":"#__contact_details","key":"id","type":"ContactTable","prefix":"Joomla\\\\Component\\\\Contact\\\\Administrator\\\\Table\\\\","config":"array()"},"common":{"dbtable":"#__ucm_content","key":"ucm_id","type":"Corecontent","prefix":"Joomla\\\\CMS\\\\Table\\\\","config":"array()"}}', '', '{"common":{"core_content_item_id":"id","core_title":"name","core_state":"published","core_alias":"alias","core_created_time":"created","core_modified_time":"modified","core_body":"address", "core_hits":"hits","core_publish_up":"publish_up","core_publish_down":"publish_down","core_access":"access", "core_params":"params", "core_featured":"featured", "core_metadata":"metadata", "core_language":"language", "core_images":"image", "core_urls":"webpage", "core_version":"version", "core_ordering":"ordering", "core_metakey":"metakey", "core_metadesc":"metadesc", "core_catid":"catid", "asset_id":"null"}, "special":{"con_position":"con_position","suburb":"suburb","state":"state","country":"country","postcode":"postcode","telephone":"telephone","fax":"fax","misc":"misc","email_to":"email_to","default_con":"default_con","user_id":"user_id","mobile":"mobile","sortname1":"sortname1","sortname2":"sortname2","sortname3":"sortname3"}}', 'ContactHelperRoute::getContactRoute', '{"formFile":"administrator\\/components\\/com_contact\\/forms\\/contact.xml","hideFields":["default_con","checked_out","checked_out_time","version"],"ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time", "version", "hits"],"convertToInt":["publish_up", "publish_down", "featured", "ordering"], "displayLookup":[ {"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"user_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"} ] }'),
@@ -1163,14 +1239,14 @@ REPLACE INTO `w5f25_content_types` (`type_id`, `type_title`, `type_alias`, `tabl
 	(12, 'User Notes', 'com_users.note', '{"special":{"dbtable":"#__user_notes","key":"id","type":"NoteTable","prefix":"Joomla\\\\Component\\\\Users\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator\\/components\\/com_users\\/forms\\/note.xml", "hideFields":["checked_out","checked_out_time", "publish_up", "publish_down"],"ignoreChanges":["modified_user_id", "modified_time", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"],"displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"}, {"sourceColumn":"created_user_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}, {"sourceColumn":"user_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}, {"sourceColumn":"modified_user_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
 	(13, 'User Notes Category', 'com_users.category', '{"special":{"dbtable":"#__categories","key":"id","type":"CategoryTable","prefix":"Joomla\\\\Component\\\\Categories\\\\Administrator\\\\Table\\\\","config":"array()"},"common":{"dbtable":"#__ucm_content","key":"ucm_id","type":"Corecontent","prefix":"Joomla\\\\CMS\\\\Table\\\\","config":"array()"}}', '', '{"common":{"core_content_item_id":"id","core_title":"title","core_state":"published","core_alias":"alias","core_created_time":"created_time","core_modified_time":"modified_time","core_body":"description", "core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"access", "core_params":"params", "core_featured":"null", "core_metadata":"metadata", "core_language":"language", "core_images":"null", "core_urls":"null", "core_version":"version", "core_ordering":"null", "core_metakey":"metakey", "core_metadesc":"metadesc", "core_catid":"parent_id", "asset_id":"asset_id"}, "special":{"parent_id":"parent_id","lft":"lft","rgt":"rgt","level":"level","path":"path","extension":"extension","note":"note"}}', '', '{"formFile":"administrator\\/components\\/com_categories\\/forms\\/category.xml", "hideFields":["checked_out","checked_out_time","version","lft","rgt","level","path","extension"], "ignoreChanges":["modified_user_id", "modified_time", "checked_out", "checked_out_time", "version", "hits", "path"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"created_user_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}, {"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_user_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"parent_id","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"}]}'),
 	(10000, 'Student', 'com_students.student', '{"special":{"dbtable":"#__students","key":"id","type":"StudentTable","prefix":"Joomla\\\\Component\\\\Students\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_students/forms/student.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
-	(10001, 'Cụm nhà', 'com_buiding_groups.cmnh', '{"special":{"dbtable":"#__buiding_groups","key":"id","type":"CmnhTable","prefix":"Joomla\\\\Component\\\\Buiding_groups\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_buiding_groups/forms/cmnh.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
-	(10002, 'Cụm nhà', 'com_building_groups.building_group', '{"special":{"dbtable":"#__building_groups","key":"id","type":"Building_groupTable","prefix":"Joomla\\\\Component\\\\Building_groups\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_building_groups/forms/building_group.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
-	(10003, 'Nhà', 'com_buildings.building', '{"special":{"dbtable":"#__buildings","key":"id","type":"BuildingTable","prefix":"Joomla\\\\Component\\\\Buildings\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_buildings/forms/building.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
-	(10004, 'Thông tin chung', 'com_gernerals.general', '{"special":{"dbtable":"#__gernerals","key":"id","type":"GeneralTable","prefix":"Joomla\\\\Component\\\\Gernerals\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_gernerals/forms/general.xml", "hideFields":["checked_out","checked_out_time","params","language" ,"footer_text"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
-	(10005, 'Danh mục yêu cầu', 'com_request_types.request_type', '{"special":{"dbtable":"#__request_types","key":"id","type":"Request_typeTable","prefix":"Joomla\\\\Component\\\\Request_types\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_request_types/forms/request_type.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
+	(10001, 'Cá»¥m nhÃ ', 'com_buiding_groups.cmnh', '{"special":{"dbtable":"#__buiding_groups","key":"id","type":"CmnhTable","prefix":"Joomla\\\\Component\\\\Buiding_groups\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_buiding_groups/forms/cmnh.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
+	(10002, 'Cá»¥m nhÃ ', 'com_building_groups.building_group', '{"special":{"dbtable":"#__building_groups","key":"id","type":"Building_groupTable","prefix":"Joomla\\\\Component\\\\Building_groups\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_building_groups/forms/building_group.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
+	(10003, 'NhÃ ', 'com_buildings.building', '{"special":{"dbtable":"#__buildings","key":"id","type":"BuildingTable","prefix":"Joomla\\\\Component\\\\Buildings\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_buildings/forms/building.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
+	(10004, 'ThÃ´ng tin chung', 'com_gernerals.general', '{"special":{"dbtable":"#__gernerals","key":"id","type":"GeneralTable","prefix":"Joomla\\\\Component\\\\Gernerals\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_gernerals/forms/general.xml", "hideFields":["checked_out","checked_out_time","params","language" ,"footer_text"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
+	(10005, 'Danh má»¥c yÃªu cáº§u', 'com_request_types.request_type', '{"special":{"dbtable":"#__request_types","key":"id","type":"Request_typeTable","prefix":"Joomla\\\\Component\\\\Request_types\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_request_types/forms/request_type.xml", "hideFields":["checked_out","checked_out_time","params","language"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}'),
 	(10006, 'Request', 'com_requests.request', '{"special":{"dbtable":"#__requests","key":"id","type":"RequestTable","prefix":"Joomla\\\\Component\\\\Requests\\\\Administrator\\\\Table\\\\"}}', '', '', '', '{"formFile":"administrator/components/com_requests/forms/request.xml", "hideFields":["checked_out","checked_out_time","params","language" ,"description"], "ignoreChanges":["modified_by", "modified", "checked_out", "checked_out_time"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"catid","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"group_id","targetTable":"#__usergroups","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"created_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_by","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}]}');
 
--- Dumping structure for table gatecard.w5f25_extensions
+-- Dumping structure for table princard.w5f25_extensions
 CREATE TABLE IF NOT EXISTS `w5f25_extensions` (
   `extension_id` int(11) NOT NULL AUTO_INCREMENT,
   `package_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Parent package ID for extensions installed as a package.',
@@ -1198,7 +1274,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_extensions` (
   KEY `extension` (`type`,`element`,`folder`,`client_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=245 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_extensions: ~236 rows (approximately)
+-- Dumping data for table princard.w5f25_extensions: ~238 rows (approximately)
 REPLACE INTO `w5f25_extensions` (`extension_id`, `package_id`, `name`, `type`, `element`, `changelogurl`, `folder`, `client_id`, `enabled`, `access`, `protected`, `locked`, `manifest_cache`, `params`, `custom_data`, `checked_out`, `checked_out_time`, `ordering`, `state`, `note`) VALUES
 	(1, 0, 'com_wrapper', 'component', 'com_wrapper', NULL, '', 1, 1, 1, 0, 1, '{"name":"com_wrapper","type":"component","creationDate":"2006-04","author":"Joomla! Project","copyright":"(C) 2007 Open Source Matters, Inc.\\n\\t","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.0.0","description":"COM_WRAPPER_XML_DESCRIPTION","group":"","namespace":"Joomla\\\\Component\\\\Wrapper","filename":"wrapper"}', '', '', NULL, NULL, 0, 0, NULL),
 	(2, 0, 'com_admin', 'component', 'com_admin', NULL, '', 1, 1, 1, 1, 1, '{"name":"com_admin","type":"component","creationDate":"2006-04","author":"Joomla! Project","copyright":"(C) 2006 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.0.0","description":"COM_ADMIN_XML_DESCRIPTION","group":"","namespace":"Joomla\\\\Component\\\\Admin"}', '', '', NULL, NULL, 0, 0, NULL),
@@ -1370,7 +1446,7 @@ REPLACE INTO `w5f25_extensions` (`extension_id`, `package_id`, `name`, `type`, `
 	(168, 0, 'plg_system_debug', 'plugin', 'debug', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_debug","type":"plugin","creationDate":"2006-12","author":"Joomla! Project","copyright":"(C) 2006 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"PLG_DEBUG_XML_DESCRIPTION","group":"","namespace":"Joomla\\\\Plugin\\\\System\\\\Debug","filename":"debug"}', '{"profile":"1","queries":"1","memory":"1","language_files":"1","language_strings":"1","strip-first":"1","strip-prefix":"","strip-suffix":""}', '', NULL, NULL, 4, 0, NULL),
 	(169, 0, 'plg_system_fields', 'plugin', 'fields', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_fields","type":"plugin","creationDate":"2016-03","author":"Joomla! Project","copyright":"(C) 2016 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.7.0","description":"PLG_SYSTEM_FIELDS_XML_DESCRIPTION","group":"","filename":"fields"}', '', '', NULL, NULL, 5, 0, NULL),
 	(170, 0, 'plg_system_highlight', 'plugin', 'highlight', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_highlight","type":"plugin","creationDate":"2011-08","author":"Joomla! Project","copyright":"(C) 2011 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"PLG_SYSTEM_HIGHLIGHT_XML_DESCRIPTION","group":"","filename":"highlight"}', '', '', NULL, NULL, 6, 0, NULL),
-	(171, 0, 'plg_system_httpheaders', 'plugin', 'httpheaders', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_httpheaders","type":"plugin","creationDate":"2017-10","author":"Joomla! Project","copyright":"(C) 2018 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.0.0","description":"PLG_SYSTEM_HTTPHEADERS_XML_DESCRIPTION","group":"","filename":"httpheaders"}', '{}', '', 80, '2024-02-20 10:30:44', 7, 0, NULL),
+	(171, 0, 'plg_system_httpheaders', 'plugin', 'httpheaders', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_httpheaders","type":"plugin","creationDate":"2017-10","author":"Joomla! Project","copyright":"(C) 2018 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.0.0","description":"PLG_SYSTEM_HTTPHEADERS_XML_DESCRIPTION","group":"","filename":"httpheaders"}', '{"xframeoptions":0,"referrerpolicy":"disabled","coop":"same-origin","additional_httpheader":[],"hsts":0,"hsts_maxage":31536000,"hsts_subdomains":0,"hsts_preload":0,"contentsecuritypolicy":"0","contentsecuritypolicy_client":"site","contentsecuritypolicy_report_only":"1","nonce_enabled":"0","script_hashes_enabled":"0","strict_dynamic_enabled":"0","style_hashes_enabled":"0","frame_ancestors_self_enabled":"1","contentsecuritypolicy_values":[]}', '', NULL, NULL, 7, 0, ''),
 	(172, 0, 'plg_system_jooa11y', 'plugin', 'jooa11y', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_jooa11y","type":"plugin","creationDate":"2022-02","author":"Joomla! Project","copyright":"(C) 2021 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.2.0","description":"PLG_SYSTEM_JOOA11Y_XML_DESCRIPTION","group":"","filename":"jooa11y"}', '', '', NULL, NULL, 8, 0, NULL),
 	(173, 0, 'plg_system_languagecode', 'plugin', 'languagecode', NULL, 'system', 0, 0, 1, 0, 1, '{"name":"plg_system_languagecode","type":"plugin","creationDate":"2011-11","author":"Joomla! Project","copyright":"(C) 2011 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"PLG_SYSTEM_LANGUAGECODE_XML_DESCRIPTION","group":"","filename":"languagecode"}', '', '', NULL, NULL, 9, 0, NULL),
 	(174, 0, 'plg_system_languagefilter', 'plugin', 'languagefilter', NULL, 'system', 0, 0, 1, 0, 1, '{"name":"plg_system_languagefilter","type":"plugin","creationDate":"2010-07","author":"Joomla! Project","copyright":"(C) 2010 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"PLG_SYSTEM_LANGUAGEFILTER_XML_DESCRIPTION","group":"","filename":"languagefilter"}', '', '', NULL, NULL, 10, 0, NULL),
@@ -1387,7 +1463,7 @@ REPLACE INTO `w5f25_extensions` (`extension_id`, `package_id`, `name`, `type`, `
 	(185, 0, 'plg_system_skipto', 'plugin', 'skipto', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_skipto","type":"plugin","creationDate":"2020-02","author":"Joomla! Project","copyright":"(C) 2019 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.0.0","description":"PLG_SYSTEM_SKIPTO_XML_DESCRIPTION","group":"","filename":"skipto"}', '{}', '', NULL, NULL, 20, 0, NULL),
 	(186, 0, 'plg_system_stats', 'plugin', 'stats', NULL, 'system', 0, 0, 1, 0, 1, '{"name":"plg_system_stats","type":"plugin","creationDate":"2013-11","author":"Joomla! Project","copyright":"(C) 2013 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_STATS_XML_DESCRIPTION","group":"","namespace":"Joomla\\\\Plugin\\\\System\\\\Stats","filename":"stats"}', '{"mode":3,"lastrun":1694681235,"unique_id":"9dc2f56b79c3e1146f253a0364be77598914f860","interval":12}', '', NULL, NULL, 21, 0, NULL),
 	(187, 0, 'plg_system_task_notification', 'plugin', 'tasknotification', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_task_notification","type":"plugin","creationDate":"2021-09","author":"Joomla! Project","copyright":"(C) 2021 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.1","description":"PLG_SYSTEM_TASK_NOTIFICATION_XML_DESCRIPTION","group":"","filename":"tasknotification"}', '', '', NULL, NULL, 22, 0, NULL),
-	(188, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_updatenotification","type":"plugin","creationDate":"2015-05","author":"Joomla! Project","copyright":"(C) 2015 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION","group":"","filename":"updatenotification"}', '{"lastrun":1721380994}', '', NULL, NULL, 23, 0, NULL),
+	(188, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_updatenotification","type":"plugin","creationDate":"2015-05","author":"Joomla! Project","copyright":"(C) 2015 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION","group":"","filename":"updatenotification"}', '{"lastrun":1721882058}', '', NULL, NULL, 23, 0, NULL),
 	(189, 0, 'plg_system_webauthn', 'plugin', 'webauthn', NULL, 'system', 0, 1, 1, 0, 1, '{"name":"plg_system_webauthn","type":"plugin","creationDate":"2019-07-02","author":"Joomla! Project","copyright":"(C) 2020 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.0.0","description":"PLG_SYSTEM_WEBAUTHN_DESCRIPTION","group":"","namespace":"Joomla\\\\Plugin\\\\System\\\\Webauthn","filename":"webauthn"}', '{}', '', NULL, NULL, 24, 0, NULL),
 	(190, 0, 'plg_task_check_files', 'plugin', 'checkfiles', NULL, 'task', 0, 1, 1, 0, 1, '{"name":"plg_task_check_files","type":"plugin","creationDate":"2021-08","author":"Joomla! Project","copyright":"(C) 2021 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.1","description":"PLG_TASK_CHECK_FILES_XML_DESCRIPTION","group":"","namespace":"Joomla\\\\Plugin\\\\Task\\\\Checkfiles","filename":"checkfiles"}', '{}', '', NULL, NULL, 1, 0, NULL),
 	(191, 0, 'plg_task_demo_tasks', 'plugin', 'demotasks', NULL, 'task', 0, 1, 1, 0, 1, '{"name":"plg_task_demo_tasks","type":"plugin","creationDate":"2021-07","author":"Joomla! Project","copyright":"(C) 2021 Open Source Matters, Inc.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"4.1","description":"PLG_TASK_DEMO_TASKS_XML_DESCRIPTION","group":"","namespace":"Joomla\\\\Plugin\\\\Task\\\\DemoTasks","filename":"demotasks"}', '{}', '', NULL, NULL, 2, 0, NULL),
@@ -1439,7 +1515,7 @@ REPLACE INTO `w5f25_extensions` (`extension_id`, `package_id`, `name`, `type`, `
 	(243, 0, 'com_request_types', 'component', 'com_request_types', '', '', 1, 1, 0, 0, 0, '{"name":"com_request_types","type":"component","creationDate":"2024-04-09","author":"Nguyen Dinh","copyright":"2024 Nguyen Dinh","authorEmail":"vb.dinhxuannguyen@gmail.com","authorUrl":"http:\\/\\/","version":"CVS: 1.0.0","description":"","group":"","namespace":"Requesttype\\\\Component\\\\Request_types","filename":"request_types"}', '{"save_history":"0"}', '', NULL, NULL, 0, 0, NULL),
 	(244, 0, 'com_requests', 'component', 'com_requests', '', '', 1, 1, 0, 0, 0, '{"name":"com_requests","type":"component","creationDate":"2024-04-09","author":"Nguyen Dinh","copyright":"2024 Nguyen Dinh","authorEmail":"vb.dinhxuannguyen@gmail.com","authorUrl":"http:\\/\\/","version":"CVS: 1.0.0","description":"","group":"","namespace":"Requests\\\\Component\\\\Requests","filename":"requests"}', '{"save_history":"0"}', '', NULL, NULL, 0, 0, NULL);
 
--- Dumping structure for table gatecard.w5f25_fields
+-- Dumping structure for table princard.w5f25_fields
 CREATE TABLE IF NOT EXISTS `w5f25_fields` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -1475,18 +1551,18 @@ CREATE TABLE IF NOT EXISTS `w5f25_fields` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_fields: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_fields: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_fields_categories
+-- Dumping structure for table princard.w5f25_fields_categories
 CREATE TABLE IF NOT EXISTS `w5f25_fields_categories` (
   `field_id` int(11) NOT NULL DEFAULT 0,
   `category_id` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`field_id`,`category_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_fields_categories: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_fields_categories: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_fields_groups
+-- Dumping structure for table princard.w5f25_fields_groups
 CREATE TABLE IF NOT EXISTS `w5f25_fields_groups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -1514,9 +1590,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_fields_groups` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_fields_groups: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_fields_groups: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_fields_values
+-- Dumping structure for table princard.w5f25_fields_values
 CREATE TABLE IF NOT EXISTS `w5f25_fields_values` (
   `field_id` int(10) unsigned NOT NULL,
   `item_id` varchar(255) NOT NULL COMMENT 'Allow references to items which have strings as ids, eg. none db systems.',
@@ -1525,9 +1601,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_fields_values` (
   KEY `idx_item_id` (`item_id`(191))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_fields_values: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_fields_values: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_finder_filters
+-- Dumping structure for table princard.w5f25_finder_filters
 CREATE TABLE IF NOT EXISTS `w5f25_finder_filters` (
   `filter_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -1546,9 +1622,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_filters` (
   PRIMARY KEY (`filter_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_filters: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_filters: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_finder_links
+-- Dumping structure for table princard.w5f25_finder_links
 CREATE TABLE IF NOT EXISTS `w5f25_finder_links` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `url` varchar(255) NOT NULL,
@@ -1579,9 +1655,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_links` (
   KEY `idx_published_sale` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`sale_price`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_links: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_links: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_finder_links_terms
+-- Dumping structure for table princard.w5f25_finder_links_terms
 CREATE TABLE IF NOT EXISTS `w5f25_finder_links_terms` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -1591,9 +1667,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_links_terms` (
   KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_links_terms: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_links_terms: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_finder_logging
+-- Dumping structure for table princard.w5f25_finder_logging
 CREATE TABLE IF NOT EXISTS `w5f25_finder_logging` (
   `searchterm` varchar(255) NOT NULL DEFAULT '',
   `md5sum` varchar(32) NOT NULL DEFAULT '',
@@ -1604,9 +1680,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_logging` (
   KEY `searchterm` (`searchterm`(191))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_logging: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_logging: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_finder_taxonomy
+-- Dumping structure for table princard.w5f25_finder_taxonomy
 CREATE TABLE IF NOT EXISTS `w5f25_finder_taxonomy` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -1630,11 +1706,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_taxonomy` (
   KEY `idx_parent_published` (`parent_id`,`state`,`access`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_taxonomy: ~1 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_taxonomy: ~0 rows (approximately)
 REPLACE INTO `w5f25_finder_taxonomy` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title`, `alias`, `state`, `access`, `language`) VALUES
 	(1, 0, 0, 1, 0, '', 'ROOT', 'root', 1, 1, '*');
 
--- Dumping structure for table gatecard.w5f25_finder_taxonomy_map
+-- Dumping structure for table princard.w5f25_finder_taxonomy_map
 CREATE TABLE IF NOT EXISTS `w5f25_finder_taxonomy_map` (
   `link_id` int(10) unsigned NOT NULL,
   `node_id` int(10) unsigned NOT NULL,
@@ -1643,9 +1719,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_taxonomy_map` (
   KEY `node_id` (`node_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_taxonomy_map: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_taxonomy_map: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_finder_terms
+-- Dumping structure for table princard.w5f25_finder_terms
 CREATE TABLE IF NOT EXISTS `w5f25_finder_terms` (
   `term_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `term` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
@@ -1665,9 +1741,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_terms` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_terms: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_terms: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_finder_terms_common
+-- Dumping structure for table princard.w5f25_finder_terms_common
 CREATE TABLE IF NOT EXISTS `w5f25_finder_terms_common` (
   `term` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `language` char(7) NOT NULL DEFAULT '',
@@ -1676,7 +1752,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_terms_common` (
   KEY `idx_lang` (`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_terms_common: ~174 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_terms_common: ~174 rows (approximately)
 REPLACE INTO `w5f25_finder_terms_common` (`term`, `language`, `custom`) VALUES
 	('a', 'en', 0),
 	('about', 'en', 0),
@@ -1853,7 +1929,7 @@ REPLACE INTO `w5f25_finder_terms_common` (`term`, `language`, `custom`) VALUES
 	('yourself', 'en', 0),
 	('yourselves', 'en', 0);
 
--- Dumping structure for table gatecard.w5f25_finder_tokens
+-- Dumping structure for table princard.w5f25_finder_tokens
 CREATE TABLE IF NOT EXISTS `w5f25_finder_tokens` (
   `term` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `stem` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
@@ -1868,11 +1944,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_tokens` (
   KEY `idx_language` (`language`)
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_tokens: 0 rows
+-- Dumping data for table princard.w5f25_finder_tokens: 0 rows
 /*!40000 ALTER TABLE `w5f25_finder_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `w5f25_finder_tokens` ENABLE KEYS */;
 
--- Dumping structure for table gatecard.w5f25_finder_tokens_aggregate
+-- Dumping structure for table princard.w5f25_finder_tokens_aggregate
 CREATE TABLE IF NOT EXISTS `w5f25_finder_tokens_aggregate` (
   `term_id` int(10) unsigned NOT NULL,
   `term` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
@@ -1888,11 +1964,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_tokens_aggregate` (
   KEY `keyword_id` (`term_id`)
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_tokens_aggregate: 0 rows
+-- Dumping data for table princard.w5f25_finder_tokens_aggregate: 0 rows
 /*!40000 ALTER TABLE `w5f25_finder_tokens_aggregate` DISABLE KEYS */;
 /*!40000 ALTER TABLE `w5f25_finder_tokens_aggregate` ENABLE KEYS */;
 
--- Dumping structure for table gatecard.w5f25_finder_types
+-- Dumping structure for table princard.w5f25_finder_types
 CREATE TABLE IF NOT EXISTS `w5f25_finder_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
@@ -1901,7 +1977,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_finder_types` (
   UNIQUE KEY `title` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_finder_types: ~5 rows (approximately)
+-- Dumping data for table princard.w5f25_finder_types: ~5 rows (approximately)
 REPLACE INTO `w5f25_finder_types` (`id`, `title`, `mime`) VALUES
 	(1, 'Category', ''),
 	(2, 'Contact', ''),
@@ -1909,7 +1985,7 @@ REPLACE INTO `w5f25_finder_types` (`id`, `title`, `mime`) VALUES
 	(4, 'News Feed', ''),
 	(5, 'Tag', '');
 
--- Dumping structure for table gatecard.w5f25_gernerals
+-- Dumping structure for table princard.w5f25_gernerals
 CREATE TABLE IF NOT EXISTS `w5f25_gernerals` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -1933,11 +2009,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_gernerals` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_gernerals: ~1 rows (approximately)
+-- Dumping data for table princard.w5f25_gernerals: ~0 rows (approximately)
 REPLACE INTO `w5f25_gernerals` (`id`, `asset_id`, `state`, `ordering`, `checked_out`, `checked_out_time`, `created_by`, `modified_by`, `slogan`, `website`, `web_api`, `facebook_link`, `zalo_link`, `instagram_link`, `twitter_link`, `telephone`, `hotline`, `footer_text`, `email`) VALUES
-	(1, 120, 1, 1, 80, '2024-04-08 09:13:23', 81, 80, 'XÂY DỰNG HỆ THỐNG KÝ TÚC XÁ TRỞ THÀNH MÔI TRƯỜNG RÈN LUYỆN - HỌC TẬP; MÔI TRƯỜNG SỐNG XANH, SỐNG HẠNH PHÚC; KHÔNG GIAN CƯ TRÚ LÝ TƯỞNG CỦA SINH VIÊN.', 'domain.edu.vnh', '2d03e3807bf7e33e897c469af844e9a976638576', '', '', '', '', '', '1900.055.559', 'Bản quyền © 2023 Trung tâm quản lý KTX ĐHQG TPHCM.', 'ktx@vnuhcm.edu.vn');
+	(1, 120, 1, 1, 80, '2024-07-24 03:30:21', 81, 80, '', 'domain.edu.vnh', '2d03e3807bf7e33e897c469af844e9a976638576', '', '', '', '', '', '1900.055.559', 'Bản quyền©2024 thuộc Trung tâm Quản lý Ký túc xá ĐHQG-HCM.', 'ktx@vnuhcm.edu.vn');
 
--- Dumping structure for table gatecard.w5f25_guidedtours
+-- Dumping structure for table princard.w5f25_guidedtours
 CREATE TABLE IF NOT EXISTS `w5f25_guidedtours` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
@@ -1961,7 +2037,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_guidedtours` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_guidedtours: ~11 rows (approximately)
+-- Dumping data for table princard.w5f25_guidedtours: ~11 rows (approximately)
 REPLACE INTO `w5f25_guidedtours` (`id`, `title`, `description`, `ordering`, `extensions`, `url`, `created`, `created_by`, `modified`, `modified_by`, `checked_out_time`, `checked_out`, `published`, `language`, `note`, `access`) VALUES
 	(1, 'COM_GUIDEDTOURS_TOUR_GUIDEDTOURS_TITLE', 'COM_GUIDEDTOURS_TOUR_GUIDEDTOURS_DESCRIPTION', 1, '["com_guidedtours"]', 'administrator/index.php?option=com_guidedtours&view=tours', '2023-09-14 08:42:00', 0, '2023-09-14 08:42:00', 0, NULL, NULL, 1, '*', '', 1),
 	(2, 'COM_GUIDEDTOURS_TOUR_GUIDEDTOURSTEPS_TITLE', 'COM_GUIDEDTOURS_TOUR_GUIDEDTOURSTEPS_DESCRIPTION', 2, '["com_guidedtours"]', 'administrator/index.php?option=com_guidedtours&view=tours', '2023-09-14 08:42:00', 0, '2023-09-14 08:42:00', 0, NULL, NULL, 1, '*', '', 1),
@@ -1975,7 +2051,7 @@ REPLACE INTO `w5f25_guidedtours` (`id`, `title`, `description`, `ordering`, `ext
 	(10, 'COM_GUIDEDTOURS_TOUR_SMARTSEARCH_TITLE', 'COM_GUIDEDTOURS_TOUR_SMARTSEARCH_DESCRIPTION', 10, '["*"]', 'administrator/index.php?option=com_finder&view=filters', '2023-09-14 08:42:00', 0, '2023-09-14 08:42:00', 0, NULL, NULL, 1, '*', '', 1),
 	(11, 'COM_GUIDEDTOURS_TOUR_USERS_TITLE', 'COM_GUIDEDTOURS_TOUR_USERS_DESCRIPTION', 11, '["*"]', 'administrator/index.php?option=com_users&view=users', '2023-09-14 08:42:00', 0, '2023-09-14 08:42:00', 0, NULL, NULL, 1, '*', '', 1);
 
--- Dumping structure for table gatecard.w5f25_guidedtour_steps
+-- Dumping structure for table princard.w5f25_guidedtour_steps
 CREATE TABLE IF NOT EXISTS `w5f25_guidedtour_steps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tour_id` int(11) NOT NULL DEFAULT 0,
@@ -2002,7 +2078,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_guidedtour_steps` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB AUTO_INCREMENT=112 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_guidedtour_steps: ~111 rows (approximately)
+-- Dumping data for table princard.w5f25_guidedtour_steps: ~111 rows (approximately)
 REPLACE INTO `w5f25_guidedtour_steps` (`id`, `tour_id`, `title`, `published`, `description`, `ordering`, `position`, `target`, `type`, `interactive_type`, `url`, `created`, `created_by`, `modified`, `modified_by`, `checked_out_time`, `checked_out`, `language`, `note`) VALUES
 	(1, 1, 'COM_GUIDEDTOURS_TOUR_GUIDEDTOURS_STEP_NEW_TITLE', 1, 'COM_GUIDEDTOURS_TOUR_GUIDEDTOURS_STEP_NEW_DESCRIPTION', 1, 'bottom', '.button-new', 2, 1, 'administrator/index.php?option=com_guidedtours&view=tours', '2023-09-14 08:42:00', 0, '2023-09-14 08:42:00', 0, NULL, NULL, '*', ''),
 	(2, 1, 'COM_GUIDEDTOURS_TOUR_GUIDEDTOURS_STEP_TITLE_TITLE', 1, 'COM_GUIDEDTOURS_TOUR_GUIDEDTOURS_STEP_TITLE_DESCRIPTION', 2, 'bottom', '#jform_title', 2, 2, 'administrator/index.php?option=com_guidedtours&view=tour&layout=edit', '2023-09-14 08:42:00', 0, '2023-09-14 08:42:00', 0, NULL, NULL, '*', ''),
@@ -2116,7 +2192,7 @@ REPLACE INTO `w5f25_guidedtour_steps` (`id`, `tour_id`, `title`, `published`, `d
 	(110, 11, 'COM_GUIDEDTOURS_TOUR_USERS_STEP_SAVECLOSE_TITLE', 1, 'COM_GUIDEDTOURS_TOUR_USERS_STEP_SAVECLOSE_DESCRIPTION', 110, 'bottom', '#save-group-children-save .button-save', 2, 1, 'administrator/index.php?option=com_users&view=user&layout=edit', '2023-09-14 08:42:00', 0, '2023-09-14 08:42:00', 0, NULL, NULL, '*', ''),
 	(111, 11, 'COM_GUIDEDTOURS_TOUR_USERS_STEP_CONGRATULATIONS_TITLE', 1, 'COM_GUIDEDTOURS_TOUR_USERS_STEP_CONGRATULATIONS_DESCRIPTION', 111, 'bottom', '', 0, 1, 'administrator/index.php?option=com_users&view=user&layout=edit', '2023-09-14 08:42:00', 0, '2023-09-14 08:42:00', 0, NULL, NULL, '*', '');
 
--- Dumping structure for table gatecard.w5f25_history
+-- Dumping structure for table princard.w5f25_history
 CREATE TABLE IF NOT EXISTS `w5f25_history` (
   `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `item_id` varchar(50) NOT NULL,
@@ -2132,9 +2208,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_history` (
   KEY `idx_save_date` (`save_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_history: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_history: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_languages
+-- Dumping structure for table princard.w5f25_languages
 CREATE TABLE IF NOT EXISTS `w5f25_languages` (
   `lang_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -2157,11 +2233,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_languages` (
   KEY `idx_ordering` (`ordering`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_languages: ~1 rows (approximately)
+-- Dumping data for table princard.w5f25_languages: ~0 rows (approximately)
 REPLACE INTO `w5f25_languages` (`lang_id`, `asset_id`, `lang_code`, `title`, `title_native`, `sef`, `image`, `description`, `metakey`, `metadesc`, `sitename`, `published`, `access`, `ordering`) VALUES
 	(1, 0, 'en-GB', 'English (en-GB)', 'English (United Kingdom)', 'en', 'en_gb', '', '', '', '', 1, 1, 1);
 
--- Dumping structure for table gatecard.w5f25_mail_templates
+-- Dumping structure for table princard.w5f25_mail_templates
 CREATE TABLE IF NOT EXISTS `w5f25_mail_templates` (
   `template_id` varchar(127) NOT NULL DEFAULT '',
   `extension` varchar(127) NOT NULL DEFAULT '',
@@ -2174,7 +2250,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_mail_templates` (
   PRIMARY KEY (`template_id`,`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_mail_templates: ~30 rows (approximately)
+-- Dumping data for table princard.w5f25_mail_templates: ~30 rows (approximately)
 REPLACE INTO `w5f25_mail_templates` (`template_id`, `extension`, `language`, `subject`, `body`, `htmlbody`, `attachments`, `params`) VALUES
 	('com_actionlogs.notification', 'com_actionlogs', '', 'COM_ACTIONLOGS_EMAIL_SUBJECT', 'COM_ACTIONLOGS_EMAIL_BODY', 'COM_ACTIONLOGS_EMAIL_HTMLBODY', '', '{"tags":["message","date","extension","username"]}'),
 	('com_config.test_mail', 'com_config', '', 'COM_CONFIG_SENDMAIL_SUBJECT', 'COM_CONFIG_SENDMAIL_BODY', '', '', '{"tags":["sitename","method"]}'),
@@ -2207,7 +2283,7 @@ REPLACE INTO `w5f25_mail_templates` (`template_id`, `extension`, `language`, `su
 	('plg_system_updatenotification.mail', 'plg_system_updatenotification', '', 'PLG_SYSTEM_UPDATENOTIFICATION_EMAIL_SUBJECT', 'PLG_SYSTEM_UPDATENOTIFICATION_EMAIL_BODY', '', '', '{"tags":["newversion","curversion","sitename","url","link","releasenews"]}'),
 	('plg_user_joomla.mail', 'plg_user_joomla', '', 'PLG_USER_JOOMLA_NEW_USER_EMAIL_SUBJECT', 'PLG_USER_JOOMLA_NEW_USER_EMAIL_BODY', '', '', '{"tags":["name","sitename","url","username","password","email"]}');
 
--- Dumping structure for table gatecard.w5f25_menu
+-- Dumping structure for table princard.w5f25_menu
 CREATE TABLE IF NOT EXISTS `w5f25_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `menutype` varchar(24) NOT NULL COMMENT 'The type of menu this item belongs to. FK to #__menu_types.menutype',
@@ -2245,7 +2321,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_menu` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_menu: ~35 rows (approximately)
+-- Dumping data for table princard.w5f25_menu: ~36 rows (approximately)
 REPLACE INTO `w5f25_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`, `publish_up`, `publish_down`) VALUES
 	(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, NULL, NULL, 0, 0, '', 0, '', 0, 71, 0, '*', 0, NULL, NULL),
 	(2, 'main', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 1, 1, 1, 3, NULL, NULL, 0, 0, 'class:bookmark', 0, '', 1, 10, 0, '*', 1, NULL, NULL),
@@ -2268,14 +2344,14 @@ REPLACE INTO `w5f25_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `
 	(19, 'main', 'com_finder_maps', 'Smart-Search-Maps', '', 'Smart Search/Smart-Search-Maps', 'index.php?option=com_finder&view=maps', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-maps', 0, '', 32, 33, 0, '*', 1, NULL, NULL),
 	(20, 'main', 'com_finder_filters', 'Smart-Search-Filters', '', 'Smart Search/Smart-Search-Filters', 'index.php?option=com_finder&view=filters', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-filters', 0, '', 34, 35, 0, '*', 1, NULL, NULL),
 	(21, 'main', 'com_finder_searches', 'Smart-Search-Searches', '', 'Smart Search/Smart-Search-Searches', 'index.php?option=com_finder&view=searches', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-searches', 0, '', 36, 37, 0, '*', 1, NULL, NULL),
-	(101, 'mainmenu', 'Welcome to KTX ĐHQG-HCM.', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 1, 1, 1, 19, NULL, NULL, 0, 2, ' ', 13, '{"featured_categories":[""],"layout_type":"blog","num_leading_articles":1,"blog_class_leading":"","num_intro_articles":3,"blog_class":"","num_columns":"","multi_column_order":"","num_links":0,"link_intro_image":"","orderby_pri":"","orderby_sec":"front","order_date":"","show_pagination":"2","show_pagination_results":"1","show_title":"","link_titles":"","show_intro":"","info_block_position":"","info_block_show_title":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_readmore":"","show_readmore_title":"","show_hits":"","show_tags":"","show_noauth":"","show_feed_link":"1","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"","menu_icon_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"1","page_heading":"","pageclass_sfx":"","menu-meta_description":"","robots":""}', 41, 42, 1, '*', 0, NULL, NULL),
+	(101, 'mainmenu', 'Welcome to KTX ĐHQG-HCM.', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 1, 1, 1, 19, NULL, NULL, 0, 2, ' ', 13, '{"layout_type":"blog","num_leading_articles":1,"blog_class_leading":"","num_intro_articles":3,"blog_class":"","num_columns":"","multi_column_order":"","num_links":0,"link_intro_image":"","orderby_pri":"","orderby_sec":"front","order_date":"","show_pagination":"2","show_pagination_results":"1","show_title":"","link_titles":"","show_intro":"","info_block_position":"","info_block_show_title":"","show_category":"","link_category":"","show_parent_category":"","link_parent_category":"","show_author":"","link_author":"","show_create_date":"","show_modify_date":"","show_publish_date":"","show_item_navigation":"","show_readmore":"","show_readmore_title":"","show_hits":"","show_tags":"","show_noauth":"","show_feed_link":"1","feed_summary":"","menu-anchor_title":"","menu-anchor_css":"","menu_icon_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"1","page_heading":"","pageclass_sfx":"","menu-meta_description":"","robots":""}', 41, 42, 0, '*', 0, NULL, NULL),
 	(106, 'main', 'COM_BUILDING_GROUPS', 'com-building-groups', '', 'com-building-groups', 'index.php?option=com_building_groups', 'component', 1, 1, 1, 234, NULL, NULL, 0, 1, 'class:component', 0, '{}', 43, 46, 0, '', 1, NULL, NULL),
 	(107, 'main', 'COM_BUILDING_GROUPS_TITLE_BUILDING_GROUPS', 'com-building-groups-title-building-groups', '', 'com-building-groups/com-building-groups-title-building-groups', 'index.php?option=com_building_groups&view=building_groups', 'component', 1, 106, 2, 234, NULL, NULL, 0, 1, 'class:component', 0, '{}', 44, 45, 0, '', 1, NULL, NULL),
 	(108, 'main', 'COM_BUILDINGS', 'com-buildings', '', 'com-buildings', 'index.php?option=com_buildings', 'component', 1, 1, 1, 235, NULL, NULL, 0, 1, 'class:component', 0, '{}', 47, 50, 0, '', 1, NULL, NULL),
 	(109, 'main', 'COM_BUILDINGS_TITLE_BUILDINGS', 'com-buildings-title-buildings', '', 'com-buildings/com-buildings-title-buildings', 'index.php?option=com_buildings&view=buildings', 'component', 1, 108, 2, 235, NULL, NULL, 0, 1, 'class:component', 0, '{}', 48, 49, 0, '', 1, NULL, NULL),
 	(112, 'main', 'COM_STUDENTS', 'com-students', '', 'com-students', 'index.php?option=com_students', 'component', 1, 1, 1, 237, NULL, NULL, 0, 1, 'class:component', 0, '{}', 51, 54, 0, '', 1, NULL, NULL),
 	(113, 'main', 'COM_STUDENTS_TITLE_STUDENTS', 'com-students-title-students', '', 'com-students/com-students-title-students', 'index.php?option=com_students&view=students', 'component', 1, 112, 2, 237, NULL, NULL, 0, 1, 'class:component', 0, '{}', 52, 53, 0, '', 1, NULL, NULL),
-	(114, 'mainmenu', 'Scan', 'scan', '', 'scan', 'index.php?option=com_students&view=students', 'component', 1, 1, 1, 237, NULL, NULL, 0, 2, ' ', 13, '{"menu-anchor_title":"","menu-anchor_css":"","menu_icon_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","robots":""}', 55, 56, 0, '*', 0, NULL, NULL),
+	(114, 'mainmenu', 'Scan', 'scan', '', 'scan', 'index.php?option=com_students&view=students', 'component', 1, 1, 1, 237, NULL, NULL, 0, 2, ' ', 13, '{"menu-anchor_title":"","menu-anchor_css":"","menu_icon_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","robots":""}', 55, 56, 1, '*', 0, NULL, NULL),
 	(115, 'mainmenu', 'Đăng nhập', 'login', '', 'login', 'index.php?option=com_users&view=login', 'component', 1, 1, 1, 22, NULL, NULL, 0, 1, ' ', 13, '{"loginredirectchoice":"1","login_redirect_url":"","login_redirect_menuitem":"114","logindescription_show":"1","login_description":"","login_image":"","login_image_alt":"","logoutredirectchoice":"1","logout_redirect_url":"","logout_redirect_menuitem":"115","logoutdescription_show":"1","logout_description":"","logout_image":"","logout_image_alt":"","menu-anchor_title":"","menu-anchor_css":"","menu_icon_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","robots":""}', 57, 58, 0, '*', 0, NULL, NULL),
 	(116, 'mainmenu', 'Đăng xuất', 'logout', '', 'logout', 'index.php?option=com_users&view=login&layout=logout&task=user.menulogout', 'component', 1, 1, 1, 22, NULL, NULL, 0, 2, ' ', 13, '{"logout":"115","menu-anchor_title":"","menu-anchor_css":"","menu_icon_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","robots":""}', 59, 60, 0, '*', 0, NULL, NULL),
 	(117, 'main', 'COM_GERNERALS', 'com_gernerals', '', 'com_gernerals', 'index.php?option=com_gernerals&view=general&layout=edit&id=1', 'component', 1, 1, 1, 241, NULL, NULL, 0, 2, 'class:component', 0, '{}', 61, 62, 0, '', 1, NULL, NULL),
@@ -2284,7 +2360,7 @@ REPLACE INTO `w5f25_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `
 	(123, 'main', 'COM_REQUESTS', 'com_requests', '', 'com_requests', 'index.php?option=com_requests', 'component', 1, 1, 1, 244, NULL, NULL, 0, 2, 'class:component', 0, '{}', 67, 70, 0, '', 1, NULL, NULL),
 	(124, 'main', 'COM_REQUESTS_TITLE_REQUESTS', 'com_requests_title_requests', '', 'com_requests/com_requests_title_requests', 'index.php?option=com_requests&view=requests', 'component', 1, 123, 2, 244, NULL, NULL, 0, 2, 'class:component', 0, '{}', 68, 69, 0, '', 1, NULL, NULL);
 
--- Dumping structure for table gatecard.w5f25_menu_types
+-- Dumping structure for table princard.w5f25_menu_types
 CREATE TABLE IF NOT EXISTS `w5f25_menu_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -2296,11 +2372,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_menu_types` (
   UNIQUE KEY `idx_menutype` (`menutype`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_menu_types: ~1 rows (approximately)
+-- Dumping data for table princard.w5f25_menu_types: ~0 rows (approximately)
 REPLACE INTO `w5f25_menu_types` (`id`, `asset_id`, `menutype`, `title`, `description`, `client_id`) VALUES
 	(1, 0, 'mainmenu', 'Main Menu', 'The main menu for the site', 0);
 
--- Dumping structure for table gatecard.w5f25_messages
+-- Dumping structure for table princard.w5f25_messages
 CREATE TABLE IF NOT EXISTS `w5f25_messages` (
   `message_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id_from` int(10) unsigned NOT NULL DEFAULT 0,
@@ -2315,9 +2391,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_messages` (
   KEY `useridto_state` (`user_id_to`,`state`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_messages: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_messages: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_messages_cfg
+-- Dumping structure for table princard.w5f25_messages_cfg
 CREATE TABLE IF NOT EXISTS `w5f25_messages_cfg` (
   `user_id` int(10) unsigned NOT NULL DEFAULT 0,
   `cfg_name` varchar(100) NOT NULL DEFAULT '',
@@ -2325,9 +2401,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_messages_cfg` (
   UNIQUE KEY `idx_user_var_name` (`user_id`,`cfg_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_messages_cfg: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_messages_cfg: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_modules
+-- Dumping structure for table princard.w5f25_modules
 CREATE TABLE IF NOT EXISTS `w5f25_modules` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
@@ -2353,7 +2429,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_modules` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_modules: ~37 rows (approximately)
+-- Dumping data for table princard.w5f25_modules: ~37 rows (approximately)
 REPLACE INTO `w5f25_modules` (`id`, `asset_id`, `title`, `note`, `content`, `ordering`, `position`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `published`, `module`, `access`, `showtitle`, `params`, `client_id`, `language`) VALUES
 	(1, 39, 'Main Menu', '', '', 1, 'sidebar-right', NULL, NULL, NULL, NULL, 0, 'mod_menu', 1, 1, '{"menutype":"mainmenu","base":"","startLevel":1,"endLevel":0,"showAllChildren":1,"tag_id":"","class_sfx":"","window_open":"","layout":"_:default","moduleclass_sfx":"","cache":1,"cache_time":900,"cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*'),
 	(2, 40, 'Login', '', '', 1, 'login', NULL, NULL, NULL, NULL, 1, 'mod_login', 1, 1, '', 1, '*'),
@@ -2393,14 +2469,14 @@ REPLACE INTO `w5f25_modules` (`id`, `asset_id`, `title`, `note`, `content`, `ord
 	(109, 96, 'Guided Tours', '', '', 1, 'status', NULL, NULL, NULL, NULL, 1, 'mod_guidedtours', 1, 1, '', 1, '*'),
 	(110, 118, 'Footer', '', NULL, 1, 'footer', NULL, NULL, NULL, NULL, 1, 'mod_footer', 1, 0, '{"layout":"_:default","moduleclass_sfx":"","cache":1,"cache_time":900,"cachemode":"static","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
 
--- Dumping structure for table gatecard.w5f25_modules_menu
+-- Dumping structure for table princard.w5f25_modules_menu
 CREATE TABLE IF NOT EXISTS `w5f25_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT 0,
   `menuid` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`moduleid`,`menuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_modules_menu: ~40 rows (approximately)
+-- Dumping data for table princard.w5f25_modules_menu: ~40 rows (approximately)
 REPLACE INTO `w5f25_modules_menu` (`moduleid`, `menuid`) VALUES
 	(1, 0),
 	(2, 0),
@@ -2443,7 +2519,7 @@ REPLACE INTO `w5f25_modules_menu` (`moduleid`, `menuid`) VALUES
 	(109, 0),
 	(110, 0);
 
--- Dumping structure for table gatecard.w5f25_newsfeeds
+-- Dumping structure for table princard.w5f25_newsfeeds
 CREATE TABLE IF NOT EXISTS `w5f25_newsfeeds` (
   `catid` int(11) NOT NULL DEFAULT 0,
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -2483,9 +2559,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_newsfeeds` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_newsfeeds: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_newsfeeds: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_overrider
+-- Dumping structure for table princard.w5f25_overrider
 CREATE TABLE IF NOT EXISTS `w5f25_overrider` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `constant` varchar(255) NOT NULL,
@@ -2494,9 +2570,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_overrider` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_overrider: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_overrider: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_postinstall_messages
+-- Dumping structure for table princard.w5f25_postinstall_messages
 CREATE TABLE IF NOT EXISTS `w5f25_postinstall_messages` (
   `postinstall_message_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `extension_id` bigint(20) NOT NULL DEFAULT 700 COMMENT 'FK to #__extensions',
@@ -2515,7 +2591,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_postinstall_messages` (
   PRIMARY KEY (`postinstall_message_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_postinstall_messages: ~5 rows (approximately)
+-- Dumping data for table princard.w5f25_postinstall_messages: ~5 rows (approximately)
 REPLACE INTO `w5f25_postinstall_messages` (`postinstall_message_id`, `extension_id`, `title_key`, `description_key`, `action_key`, `language_extension`, `language_client_id`, `type`, `action_file`, `action`, `condition_file`, `condition_method`, `version_introduced`, `enabled`) VALUES
 	(1, 227, 'COM_CPANEL_WELCOME_BEGINNERS_TITLE', 'COM_CPANEL_WELCOME_BEGINNERS_MESSAGE', '', 'com_cpanel', 1, 'message', '', '', '', '', '3.2.0', 1),
 	(2, 227, 'COM_CPANEL_MSG_STATS_COLLECTION_TITLE', 'COM_CPANEL_MSG_STATS_COLLECTION_BODY', '', 'com_cpanel', 1, 'message', '', '', 'admin://components/com_admin/postinstall/statscollection.php', 'admin_postinstall_statscollection_condition', '3.5.0', 1),
@@ -2523,7 +2599,7 @@ REPLACE INTO `w5f25_postinstall_messages` (`postinstall_message_id`, `extension_
 	(4, 227, 'PLG_SYSTEM_HTTPHEADERS_POSTINSTALL_INTRODUCTION_TITLE', 'PLG_SYSTEM_HTTPHEADERS_POSTINSTALL_INTRODUCTION_BODY', 'PLG_SYSTEM_HTTPHEADERS_POSTINSTALL_INTRODUCTION_ACTION', 'plg_system_httpheaders', 1, 'action', 'site://plugins/system/httpheaders/postinstall/introduction.php', 'httpheaders_postinstall_action', 'site://plugins/system/httpheaders/postinstall/introduction.php', 'httpheaders_postinstall_condition', '4.0.0', 1),
 	(5, 227, 'COM_USERS_POSTINSTALL_MULTIFACTORAUTH_TITLE', 'COM_USERS_POSTINSTALL_MULTIFACTORAUTH_BODY', 'COM_USERS_POSTINSTALL_MULTIFACTORAUTH_ACTION', 'com_users', 1, 'action', 'admin://components/com_users/postinstall/multifactorauth.php', 'com_users_postinstall_mfa_action', 'admin://components/com_users/postinstall/multifactorauth.php', 'com_users_postinstall_mfa_condition', '4.2.0', 1);
 
--- Dumping structure for table gatecard.w5f25_privacy_consents
+-- Dumping structure for table princard.w5f25_privacy_consents
 CREATE TABLE IF NOT EXISTS `w5f25_privacy_consents` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -2537,9 +2613,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_privacy_consents` (
   KEY `idx_user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_privacy_consents: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_privacy_consents: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_privacy_requests
+-- Dumping structure for table princard.w5f25_privacy_requests
 CREATE TABLE IF NOT EXISTS `w5f25_privacy_requests` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `email` varchar(100) NOT NULL DEFAULT '',
@@ -2551,9 +2627,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_privacy_requests` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_privacy_requests: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_privacy_requests: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_redirect_links
+-- Dumping structure for table princard.w5f25_redirect_links
 CREATE TABLE IF NOT EXISTS `w5f25_redirect_links` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `old_url` varchar(2048) NOT NULL,
@@ -2570,9 +2646,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_redirect_links` (
   KEY `idx_link_modified` (`modified_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_redirect_links: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_redirect_links: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_requests
+-- Dumping structure for table princard.w5f25_requests
 CREATE TABLE IF NOT EXISTS `w5f25_requests` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -2609,9 +2685,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_requests` (
   KEY `w5f25_requests_end_date` (`end_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_requests: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_requests: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_request_types
+-- Dumping structure for table princard.w5f25_request_types
 CREATE TABLE IF NOT EXISTS `w5f25_request_types` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -2631,11 +2707,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_request_types` (
   KEY `w5f25_request_types_created_date` (`created_date`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_request_types: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_request_types: ~1 rows (approximately)
 REPLACE INTO `w5f25_request_types` (`id`, `asset_id`, `state`, `ordering`, `checked_out`, `checked_out_time`, `created_by`, `modified_by`, `name`, `created_date`) VALUES
-	(1, 125, 1, 1, NULL, NULL, 80, 80, 'Phần mềm', NULL);
+	(1, 125, 1, 1, NULL, NULL, 80, 80, 'Pháº§n má»m', NULL);
 
--- Dumping structure for table gatecard.w5f25_scheduler_tasks
+-- Dumping structure for table princard.w5f25_scheduler_tasks
 CREATE TABLE IF NOT EXISTS `w5f25_scheduler_tasks` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
@@ -2670,16 +2746,16 @@ CREATE TABLE IF NOT EXISTS `w5f25_scheduler_tasks` (
   KEY `idx_checked_out` (`checked_out`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_scheduler_tasks: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_scheduler_tasks: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_schemas
+-- Dumping structure for table princard.w5f25_schemas
 CREATE TABLE IF NOT EXISTS `w5f25_schemas` (
   `extension_id` int(11) NOT NULL,
   `version_id` varchar(20) NOT NULL,
   PRIMARY KEY (`extension_id`,`version_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_schemas: ~6 rows (approximately)
+-- Dumping data for table princard.w5f25_schemas: ~7 rows (approximately)
 REPLACE INTO `w5f25_schemas` (`extension_id`, `version_id`) VALUES
 	(227, '4.3.2-2023-05-20'),
 	(234, '1.0.0'),
@@ -2689,7 +2765,7 @@ REPLACE INTO `w5f25_schemas` (`extension_id`, `version_id`) VALUES
 	(243, '1.0.0'),
 	(244, '1.0.0');
 
--- Dumping structure for table gatecard.w5f25_session
+-- Dumping structure for table princard.w5f25_session
 CREATE TABLE IF NOT EXISTS `w5f25_session` (
   `session_id` varbinary(192) NOT NULL,
   `client_id` tinyint(3) unsigned DEFAULT NULL,
@@ -2704,14 +2780,12 @@ CREATE TABLE IF NOT EXISTS `w5f25_session` (
   KEY `client_id_guest` (`client_id`,`guest`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_session: ~4 rows (approximately)
+-- Dumping data for table princard.w5f25_session: ~2 rows (approximately)
 REPLACE INTO `w5f25_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-	(_binary 0x317064656f6d676a626937723135767267636e35337630696732, 1, 1, 1712645325, 'joomla|s:628:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjM6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNzEyNjQzNjIwO3M6NDoibGFzdCI7aToxNzEyNjQ0NDg1O3M6Mzoibm93IjtpOjE3MTI2NDUzMjU7fXM6NzoiY291bnRlciI7aToyO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MDp7fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9";', 0, ''),
-	(_binary 0x36623975696d316f3866646e34386830666935326e66696d6569, 0, 0, 1721381055, 'joomla|s:1056:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJjb3VudGVyIjtpOjQ7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNzIxMzgxMDQ2O3M6NDoibGFzdCI7aToxNzIxMzgxMDU1O3M6Mzoibm93IjtpOjE3MjEzODEwNTU7fXM6NToidG9rZW4iO3M6MzI6IjczNGNkZjY2YTI4NjNlNWIzZGIyYjk0MTU1NzA5YmM4Ijt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6NToidXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NToibG9naW4iO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZm9ybSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo0OiJkYXRhIjthOjA6e31zOjY6InJldHVybiI7czoyMzoiaHR0cDovL2lkLmR4bmd1eWVuLmNvbS8iO319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTo4MDt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX1zOjk6ImNvbV91c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMToibWZhX2NoZWNrZWQiO2k6MTt9fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 80, 'admin'),
-	(_binary 0x393231703765676f62336676306b30366574646e39626f35726e, 1, 0, 1721381042, 'joomla|s:776:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjQ6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJjb3VudGVyIjtpOjk7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNzIxMzgwOTk0O3M6NDoibGFzdCI7aToxNzIxMzgxMDQyO3M6Mzoibm93IjtpOjE3MjEzODEwNDI7fXM6NToidG9rZW4iO3M6MzI6ImJjZjRhNTZlODE5MTJiYTgzZWU2ZDk5MTA2OTQ5NzE0Ijt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTo4MDt9czo5OiJjb21fdXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6MTE6Im1mYV9jaGVja2VkIjtpOjE7fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9";', 80, 'admin'),
-	(_binary 0x616d38376f61727168753337626f746e386a32767175666c3969, 1, 1, 1712643622, 'joomla|s:628:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjM6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJjb3VudGVyIjtpOjE7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNzEyNjQzNjIxO3M6NDoibGFzdCI7aToxNzEyNjQzNjIxO3M6Mzoibm93IjtpOjE3MTI2NDM2MjE7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MDp7fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjA7fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9";', 0, '');
+	(_binary 0x62336f3673626a696c3839686735696733666f616d6576633938, 0, 0, 1721902389, 'joomla|s:1312:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNzIxODk5ODMyO3M6NDoibGFzdCI7aToxNzIxOTAyMzgwO3M6Mzoibm93IjtpOjE3MjE5MDIzODk7fXM6NzoiY291bnRlciI7aTo0MjtzOjU6InRva2VuIjtzOjMyOiJhZjYxZDRmOTdmMTI4NjdhNmYxOGY5ODVkYjJmNmJmMSI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjI6e3M6NToidXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NToibG9naW4iO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZm9ybSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo0OiJkYXRhIjthOjA6e31zOjY6InJldHVybiI7czoyMDoiaW5kZXgucGhwP0l0ZW1pZD0xMTQiO319fXM6MTI6ImNvbV9zdHVkZW50cyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo4OiJzdHVkZW50cyI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo0OiJsaXN0IjthOjI6e3M6MTI6ImZ1bGxvcmRlcmluZyI7czo4OiJhLmlkIEFTQyI7czo1OiJsaW1pdCI7aToyMDt9czo2OiJmaWx0ZXIiO2E6MTp7czo2OiJzZWFyY2giO3M6MTI6IjA2MDMwNTAwMjIxNCI7fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjgyO31zOjk6ImNvbV91c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMToibWZhX2NoZWNrZWQiO2k6MTt9fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 82, 'cntt'),
+	(_binary 0x6d767172366930673932386e61726f313032363775616e726261, 1, 0, 1721902349, 'joomla|s:1028:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNzIxODk5ODA0O3M6NDoibGFzdCI7aToxNzIxOTAxNTA5O3M6Mzoibm93IjtpOjE3MjE5MDIzNDk7fXM6NToidG9rZW4iO3M6MzI6IjAzZGY3OWEwZWIzODE5ZjM2ZDk3ZjhmYWJmODY5NmM4IjtzOjc6ImNvdW50ZXIiO2k6MTI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjk6ImNvbV91c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6InVzZXIiO086ODoic3RkQ2xhc3MiOjI6e3M6MjoiaWQiO2E6MTp7aTowO2k6ODI7fXM6NDoiZGF0YSI7Tjt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjEyOiIAKgBzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO2k6ODA7fXM6OToiY29tX3VzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJtZmFfY2hlY2tlZCI7aToxO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9";', 80, 'admin');
 
--- Dumping structure for table gatecard.w5f25_students
+-- Dumping structure for table princard.w5f25_students
 CREATE TABLE IF NOT EXISTS `w5f25_students` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -2740,7 +2814,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_students` (
   KEY `w5f25_students_phone` (`phone`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15426 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_students: ~15,492 rows (approximately)
+-- Dumping data for table princard.w5f25_students: ~15,067 rows (approximately)
 REPLACE INTO `w5f25_students` (`id`, `asset_id`, `state`, `ordering`, `checked_out`, `checked_out_time`, `created_by`, `modified_by`, `masv`, `cccd`, `name`, `shool_name`, `image`, `address`, `building_group`, `building`, `room`, `birthday`, `phone`) VALUES
 	(2, 0, 1, 0, NULL, NULL, 0, 0, 0, '42302000011', '', '', '633341', '', '', NULL, '', NULL, ''),
 	(3, 0, 1, 0, NULL, NULL, 0, 0, 0, '30303003095', '', '', '637302', '', '', NULL, '', NULL, ''),
@@ -18168,7 +18242,7 @@ REPLACE INTO `w5f25_students` (`id`, `asset_id`, `state`, `ordering`, `checked_o
 	(15424, 0, 1, 0, NULL, NULL, 0, 0, 0, '64203000450', '', '', '650855', '', '', NULL, '', NULL, ''),
 	(15425, 0, 1, 0, NULL, NULL, 0, 0, 0, '52203000263', '', '', '650860', '', '', NULL, '', NULL, '');
 
--- Dumping structure for table gatecard.w5f25_students_old
+-- Dumping structure for table princard.w5f25_students_old
 CREATE TABLE IF NOT EXISTS `w5f25_students_old` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -18197,9 +18271,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_students_old` (
   KEY `w5f25_students_phone` (`phone`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4294967296 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_students_old: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_students_old: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_tags
+-- Dumping structure for table princard.w5f25_tags
 CREATE TABLE IF NOT EXISTS `w5f25_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -18241,11 +18315,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_tags` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_tags: ~1 rows (approximately)
+-- Dumping data for table princard.w5f25_tags: ~0 rows (approximately)
 REPLACE INTO `w5f25_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `created_by_alias`, `modified_user_id`, `modified_time`, `images`, `urls`, `hits`, `language`, `version`, `publish_up`, `publish_down`) VALUES
 	(1, 0, 0, 1, 0, '', 'ROOT', 'root', '', '', 1, NULL, NULL, 1, '', '', '', '', 80, '2023-09-14 08:41:59', '', 80, '2023-09-14 08:41:59', '', '', 0, '*', 1, NULL, NULL);
 
--- Dumping structure for table gatecard.w5f25_template_overrides
+-- Dumping structure for table princard.w5f25_template_overrides
 CREATE TABLE IF NOT EXISTS `w5f25_template_overrides` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `template` varchar(50) NOT NULL DEFAULT '',
@@ -18261,9 +18335,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_template_overrides` (
   KEY `idx_extension_id` (`extension_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_template_overrides: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_template_overrides: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_template_styles
+-- Dumping structure for table princard.w5f25_template_styles
 CREATE TABLE IF NOT EXISTS `w5f25_template_styles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `template` varchar(50) NOT NULL DEFAULT '',
@@ -18279,13 +18353,13 @@ CREATE TABLE IF NOT EXISTS `w5f25_template_styles` (
   KEY `idx_client_id_home` (`client_id`,`home`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_template_styles: ~3 rows (approximately)
+-- Dumping data for table princard.w5f25_template_styles: ~3 rows (approximately)
 REPLACE INTO `w5f25_template_styles` (`id`, `template`, `client_id`, `home`, `title`, `inheritable`, `parent`, `params`) VALUES
 	(10, 'atum', 1, '1', 'Atum - Default', 1, '', '{"hue":"hsl(214, 63%, 20%)","bg-light":"#f0f4fb","text-dark":"#495057","text-light":"#ffffff","link-color":"#2a69b8","special-color":"#001b4c","monochrome":"0","loginLogo":"images\\/logoktx.png#joomlaImage:\\/\\/local-images\\/logoktx.png?width=150&height=99","loginLogoAlt":"","logoBrandLarge":"images\\/logoktx.png#joomlaImage:\\/\\/local-images\\/logoktx.png?width=150&height=99","logoBrandLargeAlt":"","logoBrandSmall":"images\\/logoktx.png#joomlaImage:\\/\\/local-images\\/logoktx.png?width=150&height=99","logoBrandSmallAlt":""}'),
 	(11, 'cassiopeia', 0, '0', 'Cassiopeia - Default', 1, '', '{"brand":"1","logoFile":"","siteTitle":"","siteDescription":"","useFontScheme":"0","colorName":"colors_standard","fluidContainer":"0","stickyHeader":0,"backTop":0}'),
 	(13, 'studentcard', 0, '1', 'Student card - Default', 1, '', '{"brand":true,"logoFile":"images\\/logoktx.png#joomlaImage:\\/\\/local-images\\/logoktx.png?width=150&height=99","siteTitle":"","siteDescription":"","useFontScheme":"0","colorName":"colors_standard","fluidContainer":"0","stickyHeader":0,"backTop":0}');
 
--- Dumping structure for table gatecard.w5f25_ucm_base
+-- Dumping structure for table princard.w5f25_ucm_base
 CREATE TABLE IF NOT EXISTS `w5f25_ucm_base` (
   `ucm_id` int(10) unsigned NOT NULL,
   `ucm_item_id` int(11) NOT NULL,
@@ -18297,9 +18371,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_ucm_base` (
   KEY `idx_ucm_language_id` (`ucm_language_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_ucm_base: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_ucm_base: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_ucm_content
+-- Dumping structure for table princard.w5f25_ucm_content
 CREATE TABLE IF NOT EXISTS `w5f25_ucm_content` (
   `core_content_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `core_type_alias` varchar(400) NOT NULL DEFAULT '' COMMENT 'FK to the content types table',
@@ -18347,9 +18421,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_ucm_content` (
   KEY `idx_core_type_id` (`core_type_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Contains core content data in name spaced fields';
 
--- Dumping data for table gatecard.w5f25_ucm_content: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_ucm_content: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_updates
+-- Dumping structure for table princard.w5f25_updates
 CREATE TABLE IF NOT EXISTS `w5f25_updates` (
   `update_id` int(11) NOT NULL AUTO_INCREMENT,
   `update_site_id` int(11) DEFAULT 0,
@@ -18367,70 +18441,70 @@ CREATE TABLE IF NOT EXISTS `w5f25_updates` (
   `changelogurl` text DEFAULT NULL,
   `extra_query` varchar(1000) DEFAULT '',
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2494 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
+) ENGINE=InnoDB AUTO_INCREMENT=2731 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
 
--- Dumping data for table gatecard.w5f25_updates: ~58 rows (approximately)
+-- Dumping data for table princard.w5f25_updates: ~58 rows (approximately)
 REPLACE INTO `w5f25_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `changelogurl`, `extra_query`) VALUES
-	(2436, 1, 227, 'Joomla', '', 'joomla', 'file', '', 0, '4.4.6', '', 'https://update.joomla.org/core/j4/default.xml', '', '', ''),
-	(2437, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '4.4.2.2', '', 'https://update.joomla.org/language/details4/af-ZA_details.xml', '', '', ''),
-	(2438, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '4.0.2.1', '', 'https://update.joomla.org/language/details4/ar-AA_details.xml', '', '', ''),
-	(2439, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '4.4.3.5', '', 'https://update.joomla.org/language/details4/eu-ES_details.xml', '', '', ''),
-	(2440, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '4.4.2.1', '', 'https://update.joomla.org/language/details4/be-BY_details.xml', '', '', ''),
-	(2441, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/bg-BG_details.xml', '', '', ''),
-	(2442, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/ca-ES_details.xml', '', '', ''),
-	(2443, 2, 0, 'Chinese, Simplified', '', 'pkg_zh-CN', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/zh-CN_details.xml', '', '', ''),
-	(2444, 2, 0, 'Chinese, Traditional', '', 'pkg_zh-TW', 'package', '', 0, '4.4.2.1', '', 'https://update.joomla.org/language/details4/zh-TW_details.xml', '', '', ''),
-	(2445, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/hr-HR_details.xml', '', '', ''),
-	(2446, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/cs-CZ_details.xml', '', '', ''),
-	(2447, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/da-DK_details.xml', '', '', ''),
-	(2448, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/nl-NL_details.xml', '', '', ''),
-	(2449, 2, 0, 'English, Australia', '', 'pkg_en-AU', 'package', '', 0, '4.4.3.1', '', 'https://update.joomla.org/language/details4/en-AU_details.xml', '', '', ''),
-	(2450, 2, 0, 'English, Canada', '', 'pkg_en-CA', 'package', '', 0, '4.4.3.1', '', 'https://update.joomla.org/language/details4/en-CA_details.xml', '', '', ''),
-	(2451, 2, 0, 'English, New Zealand', '', 'pkg_en-NZ', 'package', '', 0, '4.4.3.2', '', 'https://update.joomla.org/language/details4/en-NZ_details.xml', '', '', ''),
-	(2452, 2, 0, 'English, USA', '', 'pkg_en-US', 'package', '', 0, '4.4.3.1', '', 'https://update.joomla.org/language/details4/en-US_details.xml', '', '', ''),
-	(2453, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/et-EE_details.xml', '', '', ''),
-	(2454, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/fi-FI_details.xml', '', '', ''),
-	(2455, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '4.4.0.1', '', 'https://update.joomla.org/language/details4/nl-BE_details.xml', '', '', ''),
-	(2456, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/fr-FR_details.xml', '', '', ''),
-	(2457, 2, 0, 'French, Canada', '', 'pkg_fr-CA', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/fr-CA_details.xml', '', '', ''),
-	(2458, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/ka-GE_details.xml', '', '', ''),
-	(2459, 2, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-DE_details.xml', '', '', ''),
-	(2460, 2, 0, 'German, Austria', '', 'pkg_de-AT', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-AT_details.xml', '', '', ''),
-	(2461, 2, 0, 'German, Liechtenstein', '', 'pkg_de-LI', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-LI_details.xml', '', '', ''),
-	(2462, 2, 0, 'German, Luxembourg', '', 'pkg_de-LU', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-LU_details.xml', '', '', ''),
-	(2463, 2, 0, 'German, Switzerland', '', 'pkg_de-CH', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-CH_details.xml', '', '', ''),
-	(2464, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '4.4.6.2', '', 'https://update.joomla.org/language/details4/el-GR_details.xml', '', '', ''),
-	(2465, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/hu-HU_details.xml', '', '', ''),
-	(2466, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '4.2.8.1', '', 'https://update.joomla.org/language/details4/ga-IE_details.xml', '', '', ''),
-	(2467, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/it-IT_details.xml', '', '', ''),
-	(2468, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/ja-JP_details.xml', '', '', ''),
-	(2469, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '4.4.0.3', '', 'https://update.joomla.org/language/details4/kk-KZ_details.xml', '', '', ''),
-	(2470, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '4.4.2.1', '', 'https://update.joomla.org/language/details4/ko-KR_details.xml', '', '', ''),
-	(2471, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '4.4.1.1', '', 'https://update.joomla.org/language/details4/lv-LV_details.xml', '', '', ''),
-	(2472, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '4.3.4.1', '', 'https://update.joomla.org/language/details4/lt-LT_details.xml', '', '', ''),
-	(2473, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '4.2.4.1', '', 'https://update.joomla.org/language/details4/mk-MK_details.xml', '', '', ''),
-	(2474, 2, 0, 'Norwegian Bokmål', '', 'pkg_nb-NO', 'package', '', 0, '4.0.1.1', '', 'https://update.joomla.org/language/details4/nb-NO_details.xml', '', '', ''),
-	(2475, 2, 0, 'Pashto Afghanistan', '', 'pkg_ps-AF', 'package', '', 0, '4.3.4.1', '', 'https://update.joomla.org/language/details4/ps-AF_details.xml', '', '', ''),
-	(2476, 2, 0, 'Persian Farsi', '', 'pkg_fa-IR', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/fa-IR_details.xml', '', '', ''),
-	(2477, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/pl-PL_details.xml', '', '', ''),
-	(2478, 2, 0, 'Portuguese, Brazil', '', 'pkg_pt-BR', 'package', '', 0, '4.4.6.6', '', 'https://update.joomla.org/language/details4/pt-BR_details.xml', '', '', ''),
-	(2479, 2, 0, 'Portuguese, Portugal', '', 'pkg_pt-PT', 'package', '', 0, '4.0.0-rc4.2', '', 'https://update.joomla.org/language/details4/pt-PT_details.xml', '', '', ''),
-	(2480, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/ro-RO_details.xml', '', '', ''),
-	(2481, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/ru-RU_details.xml', '', '', ''),
-	(2482, 2, 0, 'Serbian, Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/sr-RS_details.xml', '', '', ''),
-	(2483, 2, 0, 'Serbian, Latin', '', 'pkg_sr-YU', 'package', '', 0, '4.4.6.2', '', 'https://update.joomla.org/language/details4/sr-YU_details.xml', '', '', ''),
-	(2484, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '4.4.1.1', '', 'https://update.joomla.org/language/details4/sk-SK_details.xml', '', '', ''),
-	(2485, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/sl-SI_details.xml', '', '', ''),
-	(2486, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/es-ES_details.xml', '', '', ''),
-	(2487, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/sv-SE_details.xml', '', '', ''),
-	(2488, 2, 0, 'Tamil, India', '', 'pkg_ta-IN', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/ta-IN_details.xml', '', '', ''),
-	(2489, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/th-TH_details.xml', '', '', ''),
-	(2490, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/tr-TR_details.xml', '', '', ''),
-	(2491, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/uk-UA_details.xml', '', '', ''),
-	(2492, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '4.2.2.1', '', 'https://update.joomla.org/language/details4/vi-VN_details.xml', '', '', ''),
-	(2493, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/cy-GB_details.xml', '', '', '');
+	(2673, 1, 227, 'Joomla', '', 'joomla', 'file', '', 0, '4.4.6', '', 'https://update.joomla.org/core/j4/default.xml', '', '', ''),
+	(2674, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '4.4.2.2', '', 'https://update.joomla.org/language/details4/af-ZA_details.xml', '', '', ''),
+	(2675, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '4.0.2.1', '', 'https://update.joomla.org/language/details4/ar-AA_details.xml', '', '', ''),
+	(2676, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '4.4.3.5', '', 'https://update.joomla.org/language/details4/eu-ES_details.xml', '', '', ''),
+	(2677, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '4.4.2.1', '', 'https://update.joomla.org/language/details4/be-BY_details.xml', '', '', ''),
+	(2678, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/bg-BG_details.xml', '', '', ''),
+	(2679, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/ca-ES_details.xml', '', '', ''),
+	(2680, 2, 0, 'Chinese, Simplified', '', 'pkg_zh-CN', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/zh-CN_details.xml', '', '', ''),
+	(2681, 2, 0, 'Chinese, Traditional', '', 'pkg_zh-TW', 'package', '', 0, '4.4.2.1', '', 'https://update.joomla.org/language/details4/zh-TW_details.xml', '', '', ''),
+	(2682, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/hr-HR_details.xml', '', '', ''),
+	(2683, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/cs-CZ_details.xml', '', '', ''),
+	(2684, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/da-DK_details.xml', '', '', ''),
+	(2685, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/nl-NL_details.xml', '', '', ''),
+	(2686, 2, 0, 'English, Australia', '', 'pkg_en-AU', 'package', '', 0, '4.4.3.1', '', 'https://update.joomla.org/language/details4/en-AU_details.xml', '', '', ''),
+	(2687, 2, 0, 'English, Canada', '', 'pkg_en-CA', 'package', '', 0, '4.4.3.1', '', 'https://update.joomla.org/language/details4/en-CA_details.xml', '', '', ''),
+	(2688, 2, 0, 'English, New Zealand', '', 'pkg_en-NZ', 'package', '', 0, '4.4.3.2', '', 'https://update.joomla.org/language/details4/en-NZ_details.xml', '', '', ''),
+	(2689, 2, 0, 'English, USA', '', 'pkg_en-US', 'package', '', 0, '4.4.3.1', '', 'https://update.joomla.org/language/details4/en-US_details.xml', '', '', ''),
+	(2690, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/et-EE_details.xml', '', '', ''),
+	(2691, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/fi-FI_details.xml', '', '', ''),
+	(2692, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '4.4.0.1', '', 'https://update.joomla.org/language/details4/nl-BE_details.xml', '', '', ''),
+	(2693, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/fr-FR_details.xml', '', '', ''),
+	(2694, 2, 0, 'French, Canada', '', 'pkg_fr-CA', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/fr-CA_details.xml', '', '', ''),
+	(2695, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/ka-GE_details.xml', '', '', ''),
+	(2696, 2, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-DE_details.xml', '', '', ''),
+	(2697, 2, 0, 'German, Austria', '', 'pkg_de-AT', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-AT_details.xml', '', '', ''),
+	(2698, 2, 0, 'German, Liechtenstein', '', 'pkg_de-LI', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-LI_details.xml', '', '', ''),
+	(2699, 2, 0, 'German, Luxembourg', '', 'pkg_de-LU', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-LU_details.xml', '', '', ''),
+	(2700, 2, 0, 'German, Switzerland', '', 'pkg_de-CH', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/de-CH_details.xml', '', '', ''),
+	(2701, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '4.4.6.2', '', 'https://update.joomla.org/language/details4/el-GR_details.xml', '', '', ''),
+	(2702, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/hu-HU_details.xml', '', '', ''),
+	(2703, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '4.2.8.1', '', 'https://update.joomla.org/language/details4/ga-IE_details.xml', '', '', ''),
+	(2704, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/it-IT_details.xml', '', '', ''),
+	(2705, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/ja-JP_details.xml', '', '', ''),
+	(2706, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '4.4.0.3', '', 'https://update.joomla.org/language/details4/kk-KZ_details.xml', '', '', ''),
+	(2707, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '4.4.2.1', '', 'https://update.joomla.org/language/details4/ko-KR_details.xml', '', '', ''),
+	(2708, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '4.4.1.1', '', 'https://update.joomla.org/language/details4/lv-LV_details.xml', '', '', ''),
+	(2709, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '4.3.4.1', '', 'https://update.joomla.org/language/details4/lt-LT_details.xml', '', '', ''),
+	(2710, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '4.2.4.1', '', 'https://update.joomla.org/language/details4/mk-MK_details.xml', '', '', ''),
+	(2711, 2, 0, 'Norwegian Bokmål', '', 'pkg_nb-NO', 'package', '', 0, '4.0.1.1', '', 'https://update.joomla.org/language/details4/nb-NO_details.xml', '', '', ''),
+	(2712, 2, 0, 'Pashto Afghanistan', '', 'pkg_ps-AF', 'package', '', 0, '4.3.4.1', '', 'https://update.joomla.org/language/details4/ps-AF_details.xml', '', '', ''),
+	(2713, 2, 0, 'Persian Farsi', '', 'pkg_fa-IR', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/fa-IR_details.xml', '', '', ''),
+	(2714, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/pl-PL_details.xml', '', '', ''),
+	(2715, 2, 0, 'Portuguese, Brazil', '', 'pkg_pt-BR', 'package', '', 0, '4.4.6.6', '', 'https://update.joomla.org/language/details4/pt-BR_details.xml', '', '', ''),
+	(2716, 2, 0, 'Portuguese, Portugal', '', 'pkg_pt-PT', 'package', '', 0, '4.0.0-rc4.2', '', 'https://update.joomla.org/language/details4/pt-PT_details.xml', '', '', ''),
+	(2717, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/ro-RO_details.xml', '', '', ''),
+	(2718, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/ru-RU_details.xml', '', '', ''),
+	(2719, 2, 0, 'Serbian, Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/sr-RS_details.xml', '', '', ''),
+	(2720, 2, 0, 'Serbian, Latin', '', 'pkg_sr-YU', 'package', '', 0, '4.4.6.2', '', 'https://update.joomla.org/language/details4/sr-YU_details.xml', '', '', ''),
+	(2721, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '4.4.1.1', '', 'https://update.joomla.org/language/details4/sk-SK_details.xml', '', '', ''),
+	(2722, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/sl-SI_details.xml', '', '', ''),
+	(2723, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '4.4.4.1', '', 'https://update.joomla.org/language/details4/es-ES_details.xml', '', '', ''),
+	(2724, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/sv-SE_details.xml', '', '', ''),
+	(2725, 2, 0, 'Tamil, India', '', 'pkg_ta-IN', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/ta-IN_details.xml', '', '', ''),
+	(2726, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/th-TH_details.xml', '', '', ''),
+	(2727, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '4.4.6.2', '', 'https://update.joomla.org/language/details4/tr-TR_details.xml', '', '', ''),
+	(2728, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '4.4.5.1', '', 'https://update.joomla.org/language/details4/uk-UA_details.xml', '', '', ''),
+	(2729, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '4.2.2.1', '', 'https://update.joomla.org/language/details4/vi-VN_details.xml', '', '', ''),
+	(2730, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '4.4.6.1', '', 'https://update.joomla.org/language/details4/cy-GB_details.xml', '', '', '');
 
--- Dumping structure for table gatecard.w5f25_update_sites
+-- Dumping structure for table princard.w5f25_update_sites
 CREATE TABLE IF NOT EXISTS `w5f25_update_sites` (
   `update_site_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT '',
@@ -18444,26 +18518,26 @@ CREATE TABLE IF NOT EXISTS `w5f25_update_sites` (
   PRIMARY KEY (`update_site_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
 
--- Dumping data for table gatecard.w5f25_update_sites: ~9 rows (approximately)
+-- Dumping data for table princard.w5f25_update_sites: ~9 rows (approximately)
 REPLACE INTO `w5f25_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`, `checked_out`, `checked_out_time`) VALUES
-	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1721380995, '', NULL, NULL),
-	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_4.xml', 1, 1721381003, '', NULL, NULL),
-	(3, 'Joomla! Update Component', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1721381004, '', NULL, NULL),
-	(6, 'com_building_groups', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjA5MDI5', 1, 1721381011, '', NULL, NULL),
-	(7, 'com_buildings', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjA5MDMy', 1, 1721381018, '', NULL, NULL),
-	(9, 'com_students', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjA5MDI4', 1, 1721381025, '', NULL, NULL),
-	(10, 'com_gernerals', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjA5MDcz', 1, 1721381031, '', NULL, NULL),
-	(12, 'com_request_types', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjExMzU4', 1, 1721381038, '', NULL, NULL),
-	(13, 'com_requests', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjExMzYw', 1, 1721381044, '', NULL, NULL);
+	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1721888203, '', NULL, NULL),
+	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_4.xml', 1, 1721888204, '', NULL, NULL),
+	(3, 'Joomla! Update Component', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1721888205, '', NULL, NULL),
+	(6, 'com_building_groups', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjA5MDI5', 1, 1721888212, '', NULL, NULL),
+	(7, 'com_buildings', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjA5MDMy', 1, 1721888219, '', NULL, NULL),
+	(9, 'com_students', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjA5MDI4', 1, 1721888227, '', NULL, NULL),
+	(10, 'com_gernerals', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjA5MDcz', 1, 1721888233, '', NULL, NULL),
+	(12, 'com_request_types', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjExMzU4', 1, 1721888245, '', NULL, NULL),
+	(13, 'com_requests', 'extension', 'https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&option=com_combuilder&component=NzUyMjgtMjExMzYw', 1, 1721888252, '', NULL, NULL);
 
--- Dumping structure for table gatecard.w5f25_update_sites_extensions
+-- Dumping structure for table princard.w5f25_update_sites_extensions
 CREATE TABLE IF NOT EXISTS `w5f25_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT 0,
   `extension_id` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`update_site_id`,`extension_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Links extensions to update sites';
 
--- Dumping data for table gatecard.w5f25_update_sites_extensions: ~7 rows (approximately)
+-- Dumping data for table princard.w5f25_update_sites_extensions: ~9 rows (approximately)
 REPLACE INTO `w5f25_update_sites_extensions` (`update_site_id`, `extension_id`) VALUES
 	(1, 227),
 	(2, 228),
@@ -18475,7 +18549,7 @@ REPLACE INTO `w5f25_update_sites_extensions` (`update_site_id`, `extension_id`) 
 	(12, 243),
 	(13, 244);
 
--- Dumping structure for table gatecard.w5f25_usergroups
+-- Dumping structure for table princard.w5f25_usergroups
 CREATE TABLE IF NOT EXISTS `w5f25_usergroups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'Adjacency List Reference Id',
@@ -18489,7 +18563,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_usergroups` (
   KEY `idx_usergroup_nested_set_lookup` (`lft`,`rgt`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_usergroups: ~9 rows (approximately)
+-- Dumping data for table princard.w5f25_usergroups: ~9 rows (approximately)
 REPLACE INTO `w5f25_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 	(1, 0, 1, 18, 'Public'),
 	(2, 1, 8, 15, 'Registered'),
@@ -18501,7 +18575,7 @@ REPLACE INTO `w5f25_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUE
 	(8, 1, 16, 17, 'Super Users'),
 	(9, 1, 2, 3, 'Guest');
 
--- Dumping structure for table gatecard.w5f25_users
+-- Dumping structure for table princard.w5f25_users
 CREATE TABLE IF NOT EXISTS `w5f25_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(400) NOT NULL DEFAULT '',
@@ -18527,13 +18601,13 @@ CREATE TABLE IF NOT EXISTS `w5f25_users` (
   KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_users: ~3 rows (approximately)
+-- Dumping data for table princard.w5f25_users: ~3 rows (approximately)
 REPLACE INTO `w5f25_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`, `authProvider`) VALUES
-	(80, 'Admin', 'admin', 'dinhxuannguyen@gmail.com', '$2y$10$BwFx/2VnVHpZI9/bT3T.A.0/27iWO5Fww6.chH.N9ONWLEcpeZ4Xi', 0, 1, '2023-09-14 08:42:02', '2024-07-19 09:24:15', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","timezone":"","a11y_mono":"0","a11y_contrast":"0","a11y_highlight":"0","a11y_font":"0"}', NULL, 0, '', '', 0, ''),
-	(81, 'Manager', 'manager', 'dxnguyen@gmail.com', '$2y$10$8anQUGPl0yzQBMLG3gLEcu4QMHh1VDcVAHHmeHmA3tXGmM.WbeJRK', 0, 0, '2023-09-15 02:23:28', '2023-11-01 02:23:54', '', '{"admin_style":"","admin_language":"","language":"","editor":"","timezone":"","a11y_mono":"0","a11y_contrast":"0","a11y_highlight":"0","a11y_font":"0"}', NULL, 0, '', '', 0, ''),
-	(82, 'Tester', 'tester', 'tester@gmail.com', '$2y$10$UQCGlLkNENz8nECfdQ.xD.zGpr2UgKO.SaLQQ05cJDxETG3U.3gwW', 0, 0, '2023-10-28 01:54:25', '2023-11-01 02:19:28', '', '{"admin_style":"","admin_language":"","language":"","editor":"","timezone":"","a11y_mono":"0","a11y_contrast":"0","a11y_highlight":"0","a11y_font":"0"}', NULL, 0, '', '', 0, '');
+	(80, 'Admin', 'admin', 'dinhxuannguyen@gmail.com', '$2y$10$BwFx/2VnVHpZI9/bT3T.A.0/27iWO5Fww6.chH.N9ONWLEcpeZ4Xi', 0, 1, '2023-09-14 08:42:02', '2024-07-25 09:30:08', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","timezone":"","a11y_mono":"0","a11y_contrast":"0","a11y_highlight":"0","a11y_font":"0"}', NULL, 0, '', '', 0, ''),
+	(81, 'Manager', 'manager', 'dxnguyen@gmail.com', '$2y$10$8anQUGPl0yzQBMLG3gLEcu4QMHh1VDcVAHHmeHmA3tXGmM.WbeJRK', 1, 0, '2023-09-15 02:23:28', '2023-11-01 02:23:54', '', '{"admin_style":"","admin_language":"","language":"","editor":"","timezone":"","a11y_mono":"0","a11y_contrast":"0","a11y_highlight":"0","a11y_font":"0"}', NULL, 0, '', '', 0, ''),
+	(82, 'Printer', 'cntt', 'cntt-dl@ktxhcm.edu.vn', '$2y$10$Rpm.AsyJjaQtjDOoopvuv.YSd9nXXDVspQTdsln5Jg2f1hWRHku6a', 0, 0, '2023-10-28 01:54:25', '2024-07-25 09:30:51', '', '{"admin_style":"","admin_language":"","language":"","editor":"","timezone":"","a11y_mono":"0","a11y_contrast":"0","a11y_highlight":"0","a11y_font":"0"}', NULL, 0, '', '', 0, '');
 
--- Dumping structure for table gatecard.w5f25_user_keys
+-- Dumping structure for table princard.w5f25_user_keys
 CREATE TABLE IF NOT EXISTS `w5f25_user_keys` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` varchar(150) NOT NULL,
@@ -18546,9 +18620,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_user_keys` (
   KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_user_keys: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_user_keys: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_user_mfa
+-- Dumping structure for table princard.w5f25_user_mfa
 CREATE TABLE IF NOT EXISTS `w5f25_user_mfa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
@@ -18564,9 +18638,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_user_mfa` (
   KEY `idx_user_id` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Multi-factor Authentication settings';
 
--- Dumping data for table gatecard.w5f25_user_mfa: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_user_mfa: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_user_notes
+-- Dumping structure for table princard.w5f25_user_notes
 CREATE TABLE IF NOT EXISTS `w5f25_user_notes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL DEFAULT 0,
@@ -18588,9 +18662,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_user_notes` (
   KEY `idx_category_id` (`catid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_user_notes: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_user_notes: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_user_profiles
+-- Dumping structure for table princard.w5f25_user_profiles
 CREATE TABLE IF NOT EXISTS `w5f25_user_profiles` (
   `user_id` int(11) NOT NULL,
   `profile_key` varchar(100) NOT NULL,
@@ -18599,25 +18673,25 @@ CREATE TABLE IF NOT EXISTS `w5f25_user_profiles` (
   UNIQUE KEY `idx_user_id_profile_key` (`user_id`,`profile_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Simple user profile storage table';
 
--- Dumping data for table gatecard.w5f25_user_profiles: ~2 rows (approximately)
+-- Dumping data for table princard.w5f25_user_profiles: ~2 rows (approximately)
 REPLACE INTO `w5f25_user_profiles` (`user_id`, `profile_key`, `profile_value`, `ordering`) VALUES
 	(80, 'joomlatoken.enabled', '1', 2),
 	(80, 'joomlatoken.token', 'svN/I/07dUqGdKlxYvQRuzV5jzN+mUa6qXk1kTosK9k=', 1);
 
--- Dumping structure for table gatecard.w5f25_user_usergroup_map
+-- Dumping structure for table princard.w5f25_user_usergroup_map
 CREATE TABLE IF NOT EXISTS `w5f25_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'Foreign Key to #__users.id',
   `group_id` int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'Foreign Key to #__usergroups.id',
   PRIMARY KEY (`user_id`,`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_user_usergroup_map: ~2 rows (approximately)
+-- Dumping data for table princard.w5f25_user_usergroup_map: ~3 rows (approximately)
 REPLACE INTO `w5f25_user_usergroup_map` (`user_id`, `group_id`) VALUES
 	(80, 8),
 	(81, 6),
 	(82, 2);
 
--- Dumping structure for table gatecard.w5f25_viewlevels
+-- Dumping structure for table princard.w5f25_viewlevels
 CREATE TABLE IF NOT EXISTS `w5f25_viewlevels` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `title` varchar(100) NOT NULL DEFAULT '',
@@ -18627,7 +18701,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_viewlevels` (
   UNIQUE KEY `idx_assetgroup_title_lookup` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_viewlevels: ~5 rows (approximately)
+-- Dumping data for table princard.w5f25_viewlevels: ~5 rows (approximately)
 REPLACE INTO `w5f25_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 	(1, 'Public', 0, '[1]'),
 	(2, 'Registered', 2, '[6,2,8]'),
@@ -18635,7 +18709,7 @@ REPLACE INTO `w5f25_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 	(5, 'Guest', 1, '[9]'),
 	(6, 'Super Users', 4, '[8]');
 
--- Dumping structure for table gatecard.w5f25_webauthn_credentials
+-- Dumping structure for table princard.w5f25_webauthn_credentials
 CREATE TABLE IF NOT EXISTS `w5f25_webauthn_credentials` (
   `id` varchar(1000) NOT NULL COMMENT 'Credential ID',
   `user_id` varchar(128) NOT NULL COMMENT 'User handle',
@@ -18645,9 +18719,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_webauthn_credentials` (
   KEY `user_id` (`user_id`(100))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_webauthn_credentials: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_webauthn_credentials: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_workflows
+-- Dumping structure for table princard.w5f25_workflows
 CREATE TABLE IF NOT EXISTS `w5f25_workflows` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(11) DEFAULT 0,
@@ -18675,11 +18749,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_workflows` (
   KEY `idx_checked_out` (`checked_out`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_workflows: ~1 rows (approximately)
+-- Dumping data for table princard.w5f25_workflows: ~0 rows (approximately)
 REPLACE INTO `w5f25_workflows` (`id`, `asset_id`, `published`, `title`, `description`, `extension`, `default`, `ordering`, `created`, `created_by`, `modified`, `modified_by`, `checked_out_time`, `checked_out`) VALUES
 	(1, 56, 1, 'COM_WORKFLOW_BASIC_WORKFLOW', '', 'com_content.article', 1, 1, '2023-09-14 08:41:59', 80, '2023-09-14 08:41:59', 80, NULL, NULL);
 
--- Dumping structure for table gatecard.w5f25_workflow_associations
+-- Dumping structure for table princard.w5f25_workflow_associations
 CREATE TABLE IF NOT EXISTS `w5f25_workflow_associations` (
   `item_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Extension table id value',
   `stage_id` int(11) NOT NULL COMMENT 'Foreign Key to #__workflow_stages.id',
@@ -18691,9 +18765,9 @@ CREATE TABLE IF NOT EXISTS `w5f25_workflow_associations` (
   KEY `idx_extension` (`extension`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_workflow_associations: ~0 rows (approximately)
+-- Dumping data for table princard.w5f25_workflow_associations: ~0 rows (approximately)
 
--- Dumping structure for table gatecard.w5f25_workflow_stages
+-- Dumping structure for table princard.w5f25_workflow_stages
 CREATE TABLE IF NOT EXISTS `w5f25_workflow_stages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(11) DEFAULT 0,
@@ -18713,11 +18787,11 @@ CREATE TABLE IF NOT EXISTS `w5f25_workflow_stages` (
   KEY `idx_default` (`default`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_workflow_stages: ~1 rows (approximately)
+-- Dumping data for table princard.w5f25_workflow_stages: ~0 rows (approximately)
 REPLACE INTO `w5f25_workflow_stages` (`id`, `asset_id`, `ordering`, `workflow_id`, `published`, `title`, `description`, `default`, `checked_out_time`, `checked_out`) VALUES
 	(1, 57, 1, 1, 1, 'COM_WORKFLOW_BASIC_STAGE', '', 1, NULL, NULL);
 
--- Dumping structure for table gatecard.w5f25_workflow_transitions
+-- Dumping structure for table princard.w5f25_workflow_transitions
 CREATE TABLE IF NOT EXISTS `w5f25_workflow_transitions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(11) DEFAULT 0,
@@ -18740,7 +18814,7 @@ CREATE TABLE IF NOT EXISTS `w5f25_workflow_transitions` (
   KEY `idx_workflow_id` (`workflow_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table gatecard.w5f25_workflow_transitions: ~7 rows (approximately)
+-- Dumping data for table princard.w5f25_workflow_transitions: ~7 rows (approximately)
 REPLACE INTO `w5f25_workflow_transitions` (`id`, `asset_id`, `ordering`, `workflow_id`, `published`, `title`, `description`, `from_stage_id`, `to_stage_id`, `options`, `checked_out_time`, `checked_out`) VALUES
 	(1, 58, 1, 1, 1, 'UNPUBLISH', '', -1, 1, '{"publishing":"0"}', NULL, NULL),
 	(2, 59, 2, 1, 1, 'PUBLISH', '', -1, 1, '{"publishing":"1"}', NULL, NULL),

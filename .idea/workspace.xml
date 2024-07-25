@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88bb1df5-5e4b-4034-9dfe-f48fc5388276" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/phpqrcode/qrencode.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/phpqrcode/qrencode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/templates/site/studentcard/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/templates/site/studentcard/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/studentcard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/studentcard/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="88bb1df5-5e4b-4034-9dfe-f48fc5388276" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +77,7 @@
       <workItem from="1721769600208" duration="5025000" />
       <workItem from="1721781223914" duration="25539000" />
       <workItem from="1721860310010" duration="651000" />
-      <workItem from="1721866994273" duration="28178000" />
+      <workItem from="1721866994273" duration="28579000" />
     </task>
     <servers />
   </component>
