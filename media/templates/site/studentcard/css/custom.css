@@ -51,7 +51,7 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
     width: 60px;
     height: 90px;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     overflow: hidden;
     text-align: center;
     margin: 0 auto;
@@ -144,6 +144,8 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
     transform: scale(1.5);
     cursor: zoom-out;
 }
+
+
 /*****/
 
 @media print {

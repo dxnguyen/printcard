@@ -72,11 +72,11 @@
                 <p style="text-align: center; margin-bottom: 0;"><span class="control-text">Font-size (Họ tên):</span> <input type="number"
                                                                                                        id="textFullname"
                                                                                                        value="12"
-                                                                                                       style="width: 50px; margin-right: 20px; border: 1px solid #ccc; border-radius: 5px"/>
+                                                                                                       style="width: 50px; margin-right: 20px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
                     <span class="control-text" style="margin-left: 20px;">Mã hình SV:</span> <input type="text"
                                                                                                  id="textImgCode"
                                                                                                  value=""
-                                                                                                 style="width: 100px; margin-right: 30px; border: 1px solid #ccc; border-radius: 5px"/>
+                                                                                                 style="width: 100px; margin-right: 30px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
                     <button id="printBtn" class="btn btn-sm btn-danger" onclick="print();">In thẻ</button>
                 </p>
             </div>
@@ -138,6 +138,13 @@
             }
         });
 
+        $('.imgBox').mousedown(function(){
+            $(this).css('border', '1px solid #ccc');
+        });
+        $('.imgBox').mouseup(function(){
+            $(this).css('border', 'none');
+        });
+
         // process zoom image
 
         const frame = document.querySelector('.imgBox');
@@ -180,6 +187,7 @@
 
         // Bắt sự kiện bấm chuột để di chuyển ảnh
         img.addEventListener('mousedown', function (event) {
+            event.preventDefault();
             isDragging = true;
             startDragX = event.clientX - posX;
             startDragY = event.clientY - posY;
@@ -188,6 +196,7 @@
 
         // mouse move
         document.addEventListener('mousemove', function (event) {
+            event.preventDefault();
             if (isDragging) {
                 posX = event.clientX - startDragX;
                 posY = event.clientY - startDragY;
@@ -202,24 +211,4 @@
         });
 
     });
-</script>
-<script>
-
-    function printDiv(divId) {
-        var divContents = document.getElementById(divId).innerHTML;
-        var printWindow = window.open('', '');
-        printWindow.document.write('<html><head><title>Print Card</title>');
-        printWindow.document.write('<link href="<?php echo URI::root()?>media/templates/site/studentcard/css/template.min.css" rel="stylesheet" />');
-        printWindow.document.write('<link href="<?php echo URI::root()?>media/templates/site/studentcard/css/global/colors_standard.min.css" rel="stylesheet" />');
-        printWindow.document.write('<link href="<?php echo URI::root()?>media/templates/site/studentcard/css/custom.css" rel="stylesheet" />');
-        printWindow.document.write('<style>@media print {body{margin: 0; padding: 0;} #adminForm{display: none;} #printableArea {position: relative; overflow: hidden; border: none; margin: 0; padding: 0; width: 86mm; height: 54mm;.codebox { width: 100%; position: static; bottom: 3px; display: flex;}}}</style>');
-        printWindow.document.write('</head><body>');
-        printWindow.document.write('<div id="printableArea">' + divContents + '</div>');
-        printWindow.document.write('</body></html>');
-        printWindow.document.close();
-        setTimeout(() => {
-            printWindow.print();
-        }, 500);
-
-    }
 </script>

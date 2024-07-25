@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88bb1df5-5e4b-4034-9dfe-f48fc5388276" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/phpqrcode/qrencode.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/phpqrcode/qrencode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/templates/site/studentcard/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/templates/site/studentcard/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/studentcard/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/studentcard/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="D:\xampp8\php\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/picqer/php-barcode-generator" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2jah4y6511o2erLqN61lOIU25Pl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/xampp8/htdocs/printcard/inc",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp8\htdocs\printcard\inc" />
+      <recent name="D:\xampp8\htdocs\printcard\components\com_students\tmpl\students" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88bb1df5-5e4b-4034-9dfe-f48fc5388276" name="Changes" comment="" />
+      <created>1721630912874</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721630912874</updated>
+      <workItem from="1721630913897" duration="10457000" />
+      <workItem from="1721685388416" duration="4725000" />
+      <workItem from="1721694579169" duration="29515000" />
+      <workItem from="1721769600208" duration="5025000" />
+      <workItem from="1721781223914" duration="25539000" />
+      <workItem from="1721860310010" duration="651000" />
+      <workItem from="1721866994273" duration="28178000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

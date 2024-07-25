@@ -494,7 +494,7 @@ function checkWeeks($startdate , $enddate){
     {
         $PNG_TEMP_DIR = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'qrcode' . DIRECTORY_SEPARATOR;
         $PNG_WEB_DIR = 'uploads/qrcode';
-        include_once "phpqrcode/qrlib.php";
+        require_once "phpqrcode/qrlib.php";
         if (!file_exists($PNG_TEMP_DIR))
             mkdir($PNG_TEMP_DIR);
         $filename_empty = $PNG_TEMP_DIR . 'test.png';

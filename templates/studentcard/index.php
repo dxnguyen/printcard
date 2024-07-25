@@ -17,7 +17,8 @@ use Joomla\CMS\Uri\Uri;
 
 /** @var Joomla\CMS\Document\HtmlDocument $this */
 
-$app   = Factory::getApplication(); 
+$app   = Factory::getApplication();
+$config = $app->getConfig();
 $input = $app->getInput();
 $wa    = $this->getWebAssetManager();
 $user  = Factory::getUser();
@@ -132,7 +133,7 @@ $wa->useScript('bootstrap.toast');
             <div class="grid-child">
                 <div class="navbar-brand">
                     <a class="brand-logo" href="<?php echo $this->baseurl; ?>"><?php echo $logo;?></a>
-                    <span class="text-sitename">Phần mềm in thẻ Sinh viên nội trú KTX ĐHQG-HCM</span>
+                    <span class="text-sitename"><?php echo $config->get('sitename');?></span>
                 </div>
                 <?php if (!$user->get('guest')) :  ?>
                     <div class="header-right-box">
