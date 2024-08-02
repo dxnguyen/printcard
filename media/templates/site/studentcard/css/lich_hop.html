@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="" style="margin-top: 40px;">
+    <div class="table-responsive">
+        <table class="table table-bordered  table-striped">
+            <thead>
+            <tr><td colspan="3" class="text-center">THÔNG TIN LỊCH HỌP</td> </tr>
+            <tr>
+                <th style="width: 15%;" class="upercase">Phòng</th>
+                <th style="width: 40%;" class="upercase">Nội dung</th>
+                <th style="width: 45%;" class="upercase">Thành phần</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="green">
+                <td rowspan="2" class="upercase">PHÒNG HỌP 1</td>
+                <td>Đang diễn ra: Lễ chào cờ đầu tuần</td>
+                <td>RToàn thể VC-NLĐ</td>
+            </tr>
+            <tr class="green">
+                <td>Phiên họp kế tiếp: Họp Ban Giám đốc lúc 09h00</td>
+                <td>Ban Giám đốc, ông Lại Thế Tuân, bà Lê Thị Thanh An, bà Võ Thị Huyền, Thành phần theo IOC</td>
+            </tr>
+            <tr class="orange">
+                <td rowspan="2" class="upercase">PHÒNG HỌP 2</td>
+                <td>Đang diễn ra: Chưa có</td>
+                <td></td>
+            </tr>
+            <tr class="orange">
+                <td>Phiên họp kế tiếp: Họp Chi bộ 4 lúc 13h00</td>
+                <td>Ban Giám đốc, ông Lại Thế Tuân, bà Lê Thị Thanh An, bà Võ Thị Huyền, Thành phần theo IOC</td>
+            </tr>
+            <tr class="purple">
+                <td rowspan="2" class="upercase">HỘI TRƯỜNG</td>
+                <td>Chưa có lịch </td>
+                <td></td>
+            </tr>
+            <tr class="purple">
+                <td>Chưa có lịch </td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 2rem;
+    }
+    th, td {
+        border: 3px solid blue !important;
+        padding: 8px;
+        text-align: center;
+        vertical-align: middle !important;
+        text-align: left;
+    }
+    td {
+        text-align: left;
+        color: #000; font-weight: bold;
+    }
+    th{ text-align: center;color: #000; font-weight: bold;}
+    .upercase{ text-transform: uppercase; text-align: center}
+    .green td{ background-color: rgba(113,143,35,0.92);}
+    .orange td{ background-color: #FAE2D5;}
+    .purple td{ background-color: #F2CEED;}
+</style>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+

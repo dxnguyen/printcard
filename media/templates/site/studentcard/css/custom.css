@@ -25,26 +25,27 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
 .controlbox #printBtn { padding: 5px 15px;}
 
 
-.frameCard { position: relative; overflow: hidden; width: 86mm; height: 54mm; display: flex;/*border: 1px solid #ccc;*/border-radius: 5px;background-color: #ffffff; margin: 0 auto; padding-left: 20px; }
+.frameCard { position: relative; overflow: hidden; width: 85.60mm; height: 53.98mm; display: flex;border: 1px solid #ccc;border-radius: 5px;background-color: #ffffff; margin: 0 auto; padding-left: 20px; }
 .studentCard {
     position: relative;
-    width: 86mm;
-    height: 38mm;
-    margin-top: 12%;
-    margin-bottom: 6.5%;
-    /*padding: 5px;*/
     overflow: hidden;
+    width: 100%;
+    height: 43.9mm;
+    padding-top: 4px;
+    margin-top: 12%;
+    /*margin-bottom: 6%;*/
+    /*padding: 5px;*/
     /*border: 1px solid #ccc;*/
 }
 
-.infobox { width:100%; position: relative; display: flex; height: 27mm;}
-.codebox { width: 100%; position: absolute; bottom: 3px; display: flex;}
+.infobox { width:100%; position: relative; overflow: hidden; display: flex; height: 27mm; clear: both; }
+.codebox { width: 100%; position: relative; bottom: 0px; display: flex; margin-top: -1mm; }
 .img-barcode {
     position: relative;
-    width: 35%;
+    width: 25.4mm;
     display: flex;
 }
-.contain-img-box { align-items: flex-end;}
+.contain-img-box { align-items: center; }
 
 .studentCard .imgBox {
     position: relative;
@@ -81,13 +82,12 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
 }
 
 .studentCard .studentInfo {
-    width: 70%;
+    width: 60.6mm;
     font-size: 9px;
-    margin-left: -10px;
-    /*line-height: 1.6;*/
+    margin-left: 0;
 }
 
-.margin-info { margin-top: 30px; }
+.margin-info { padding-top: 30px; }
 
 .studentCard .studentInfo h4 {
     font-family: "Times New Roman";
@@ -95,24 +95,23 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
     font-weight: bold;
     text-align: center;
     color: #ff0000;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
 }
 
 .studentCard .studentInfo p {
     font-family: UTM-HelvstIns;
-    color: #000050;
-    margin-bottom: 4px;
+    color: #162344;
+    margin-bottom: 2.5px;
 }
 
 .studentCard .studentInfo p > span {
-    font-weight: bold;
     font-size: 10px;
     padding-left: 4px;
 }
-.studentCard .studentInfo p .fullName { text-transform: uppercase; font-size: 12px; padding-left:36px !important; }
-.birthday {  padding-left:38px !important;}
-.school { display: inline-flex;  padding-left:48px !important; }
+.studentCard .studentInfo p .fullName { text-transform: uppercase; font-size: 12px; padding-left:40px !important; font-weight: 580; }
+.birthday {  padding-left:40px !important; font-weight: 480; }
+.school { display: inline-flex;  padding-left:52px !important; font-weight: 480; }
 .barcode, .qrcode {
     position: relative;
     overflow: hidden;
@@ -123,14 +122,15 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
     text-align: center;
     margin: 0 auto;
     display: flex;
+    height: 6mm;
     /*max-width: 90%;*/
 }
 
 .qrcode img {
-    height: 30px;
+    height: 40px;
     position: relative;
     float: right !important;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 /** zoom image **/
@@ -148,22 +148,25 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
 
 /*****/
 
-@media print {
-    body * {
-        visibility: hidden;
-    }
-    #printCard { margin: 0 auto;}
-    #printCard, #printCard * {
-        visibility: visible;
-    }
+/*@media print {
+    !*#printCard { border: none; margin: 0; padding: 0; width: 100%; height: auto; }
+    .codebox { position: static !important; }
 
-    #printCard {
+    .no-print {
+        display: none;
+    }
+    #printCard { display: block; width: 100%; height: auto;}*!
+    !*#printCard, #printCard * {
+        display: block;
+    }*!
+
+    !*#printCard {
         position: absolute;
         top: 30%;
         left: 50%;
         transform: translate(-50%, -40%);
-    }
-}
+    }*!
+}*/
 /*******End print card ***************/
 
 @media (max-width: 768px) {

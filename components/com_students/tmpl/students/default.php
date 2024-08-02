@@ -46,19 +46,17 @@
     <input type="hidden" name="task" value=""/>
     <?php echo HTMLHelper::_('form.token'); ?>
 </form>
-<!--<div style="width: 100%; text-align: center; margin-bottom: 40px;"><img src="/uploads/thesv.jpg" style="width: 86mm; margin-bottom: 40px; margin: 0 auto;"></div>-->
+<!--<div style="width: 100%; text-align: center; margin-bottom: 40px;"><img src="<?php /*URI::root()*/?>uploads/thesv.jpg" style="width: 85.60mm; margin-bottom: 40px; margin: 0 auto;"></div>-->
 <?php
     $pathImg = "https://ql.ktxhcm.edu.vn/SharedData/HinhSV/";
     if ($this->items):
-        $studentImg = $pathImg . $this->items['IdCardNumber'] . ".jpg";
+        $ImageAvartar = $this->items['ImageAvartar'];
+        $componentImg = @explode('.', $ImageAvartar);
+        $imgName      = (!empty($componentImg[1])) ? $ImageAvartar : $ImageAvartar.'.jpg';
+        $studentImg   = $pathImg . $imgName;
 
         if (!isAvailableImage($studentImg)) {
-            $students = getRowsByFieldValue('#__students', 'cccd', $this->items['IdCardNumber']);
-            if ($students && !empty($students[0]->image)) {
-                $studentImg = $pathImg . $students[0]->image . ".jpg";
-            } else {
-                $studentImg = URI::root() . 'inc/no-image.jpg';
-            }
+            $studentImg = URI::root() . 'inc/no-image.jpg';
         }
 
         $schoolName = $this->items['UniversityName'];
@@ -70,19 +68,19 @@
         <div id="cardBox">
             <div class="controlbox">
                 <p style="text-align: center; margin-bottom: 0;"><span class="control-text">Font-size (Họ tên):</span> <input type="number"
-                                                                                                       id="textFullname"
-                                                                                                       value="12"
-                                                                                                       style="width: 50px; margin-right: 20px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
+                                                                                                                              id="textFullname"
+                                                                                                                              value="12"
+                                                                                                                              style="width: 50px; margin-right: 20px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
                     <span class="control-text" style="margin-left: 20px;">Mã hình SV:</span> <input type="text"
-                                                                                                 id="textImgCode"
-                                                                                                 value=""
-                                                                                                 style="width: 100px; margin-right: 30px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
-                    <button id="printBtn" class="btn btn-sm btn-danger" onclick="print();">In thẻ</button>
+                                                                                                    id="textImgCode"
+                                                                                                    value=""
+                                                                                                    style="width: 100px; margin-right: 30px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
+                    <button id="printBtn" class="btn btn-sm btn-danger" onclick="printDiv('printCard');//print();">In thẻ</button>
                 </p>
             </div>
             <div class="frameCard" id="printCard">
                 <div class="overlay"></div>
-                <div class="studentCard">
+                <div class="studentCard" id="studentCard">
                     <div class="infobox">
                         <div class="img-barcode contain-img-box">
                             <div class="imgBox">
@@ -91,12 +89,11 @@
                             </div>
                         </div>
                         <div class="studentInfo margin-info">
-                            <!--<h4 class="cardTitle">THẺ NỘI TRÚ</h4>-->
-                            <p><span class="fullName"><?php echo $this->items['Name']; ?></span></p>
-                            <p> <span
+                            <p class="pinfo"><span class="fullName"><?php echo $this->items['Name']; ?></span></p>
+                            <p class="pinfo"> <span
                                         class="birthday"><?php echo $this->items['BDay'] . '/' . $this->items['BMonth'] . '/' . $this->items['BYear']; ?></span>
                             </p>
-                            <p><span class="school"><?php echo $schoolName; ?></span></p>
+                            <p class="pinfo"><span class="school"><?php echo $schoolName; ?></span></p>
                         </div>
                     </div>
                     <div class="codebox">
@@ -118,8 +115,7 @@
     <?php else: ?>
         <div class="data-not-exist"><h4>Không có dữ liệu được tìm thấy trong hệ thống</h4></div>
     <?php endif; ?>
-<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
-<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
+
 
 <script>
     $(document).ready(function () {
@@ -211,4 +207,73 @@
         });
 
     });
+
+    // print
+    function printDiv(divId) {
+        var printWindow = window.open('', '', 'height=800,width=1000');
+        var divContent = document.getElementById(divId).innerHTML;
+        printWindow.document.write('<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><title>Print</title><link href="<?php echo URI::root()?>media/templates/site/studentcard/css/template.min.css?59858bfad5a4425bda3fa90f86d1c91b" rel="stylesheet" /><link href="<?php echo URI::root()?>media/templates/site/studentcard/css/custom.css" rel="stylesheet" /><style> @media print { body{ width:100%;margin:0; padding:0;} .frameCard{ padding-left: 20px; } .codebox{ position:static; } .barcode, .qrcode{margin-top:3px;} .barcode img{max-width:100%;} } </style></head><body>');
+        printWindow.document.write(divContent);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.focus();
+        setTimeout(() => {
+            printWindow.print();
+        }, 500);
+    }
+
 </script>
+
+<script>
+    /*function onPrint() {
+        alert("Lệnh đang được thực hiện!");
+        //send request print to server
+        $apiUrl = '';
+        fetch($apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'event=print'
+        });
+    }
+
+    window.onbeforeprint = onPrint;*/
+</script>
+
+<?php
+
+    /*if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $event = $_POST['event'] ?? 'unknown';
+        file_put_contents('print_log.txt', "Event: $event, Time: " . date('Y-m-d H:i:s') . "\n", FILE_APPEND);
+    }*/
+
+?>
+<!-- Thêm thư viện html2canvas -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
+<script>
+function exportToImage() {
+    html2canvas(document.getElementById('printCard'), {
+        useCORS: true,
+        logging: true,
+        scale: 8
+    }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+
+        // Mở ảnh trong cửa sổ mới
+        const imgWindow = window.open('', '', 'height=600,width=800');
+        imgWindow.document.write('<html><head><title>Print Image</title></head><body>');
+        imgWindow.document.write('<img src="' + imgData + '" style="width:100%;"/>');
+        imgWindow.document.write('</body></html>');
+        imgWindow.document.close();
+        imgWindow.focus();
+
+        setTimeout(() => {
+            imgWindow.print();
+        }, 500);
+    }).catch(error => {
+        console.error('Error capturing the element:', error);
+    });
+}
+</script>-->

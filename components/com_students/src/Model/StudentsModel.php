@@ -191,7 +191,7 @@ class StudentsModel extends ListModel
 		$code    = !empty($search) ? $db->escape($search, true) : $studentCode;
 		$domain  = 'http://apihealthcare.ktxhcm.edu.vn';
 		$api_key = getInfoweb()->web_api;
-		$token   = $this->getTokenApi(trim($api_key));
+		$token   = @$this->getTokenApi(trim($api_key));
 		$items   = array();
 		if (!empty($code)) {
 			$curl_handle = curl_init();
@@ -215,7 +215,7 @@ class StudentsModel extends ListModel
                 }
                 //QRCODE
                 require_once dirname(dirname(dirname(dirname(dirname(__FILE__))))).DIRECTORY_SEPARATOR."inc".DIRECTORY_SEPARATOR."functions.php";
-                $url = URI::root() . 'scan?code=' . $idCardNumber;
+                $url = 'https://id.ktxhcm.edu.vn/scan?code=' . $idCardNumber;
                 $qrcode = @qrCode($url, $idCardNumber);
                 $result['data']['qrcode'] = $qrcode;
 
