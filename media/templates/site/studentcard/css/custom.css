@@ -24,8 +24,8 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
 .controlbox { width: 100%; position: relative; overflow: hidden; padding: 10px; margin-bottom: 50px; background-color:rgba(17,52,149,0.92); color: #ffffff;}
 .controlbox #printBtn { padding: 5px 15px;}
 
-
-.frameCard { position: relative; overflow: hidden; width: 85.60mm; height: 53.98mm; display: flex;border: 1px solid #ccc;border-radius: 5px;background-color: #ffffff; margin: 0 auto; padding-left: 20px; }
+/*#printCard {transform: scale(1.2);transform-origin: center center;}*/
+.frameCard { position: relative; overflow: hidden; width: 85.60mm; height: 53.98mm; display: flex;border: 1px solid #ccc; border-radius: 15px;background-color: #ffffff; margin: 0 auto; padding-left: 20px; }
 .studentCard {
     position: relative;
     overflow: hidden;
@@ -101,7 +101,7 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
 
 .studentCard .studentInfo p {
     font-family: UTM-HelvstIns;
-    color: #162344;
+    color: #162240; /*162344*/
     margin-bottom: 2.5px;
 }
 
@@ -109,6 +109,7 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
     font-size: 10px;
     padding-left: 4px;
 }
+
 .studentCard .studentInfo p .fullName { text-transform: uppercase; font-size: 12px; padding-left:40px !important; font-weight: 580; }
 .birthday {  padding-left:40px !important; font-weight: 480; }
 .school { display: inline-flex;  padding-left:52px !important; font-weight: 480; }
@@ -143,6 +144,102 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
 #draggable-image.zoomed {
     transform: scale(1.5);
     cursor: zoom-out;
+}
+
+/*.studentCard .studentInfo p > span.label { display: none;}*/
+.eCard { background: url("../images/background_card.png") center no-repeat; background-size: cover; border: none;/* transform: scale(1.5);transform-origin: center center;*/}
+.eCard .studentCard .studentInfo p > span.label { display: inline-flex; font-size: 8px; color: #227FC2; font-family: Tahoma; font-weight: 520; }
+.eCard .studentCard .studentInfo p .fullName { padding-left:4px !important; }
+.eCard .birthday { padding-left: 4px !important; }
+.eCard .school { padding-left:4px !important; }
+
+/** Ecard **/
+#eCard {position: relative; width:600px; height: 380px; padding-left: 40px; margin-top: 40px; margin-bottom: 40px; background: url("../images/background_card.png") center no-repeat; background-size: cover; border: none; overflow: hidden;}
+#eCard .studentCard .studentInfo p > span.label { font-size: 14px; color: #227FC2; font-family: Tahoma; font-weight: 520; }
+#eCard .studentCard .studentInfo p .fullName { padding-left:4px !important; }
+#eCard .birthday { padding-left: 4px !important; }
+#eCard .school { padding-left:4px !important; }
+#eCard .studentCard {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 275px;
+    padding-top: 4px;
+    margin-top: 12%;
+}
+
+#eCard .infobox { width:100%; position: relative; overflow: hidden; display: flex; height: 210px; clear: both; }
+#eCard .codebox { width: 100%; position: relative; bottom: 0px; display: flex; margin-top: -1mm; }
+#eCard .img-barcode {
+    position: relative;
+    width: 200px;
+    display: flex;
+}
+#eCard .contain-img-box { align-items: center; }
+
+#eCard .studentCard .imgBox {
+    position: relative;
+    width: 120px;
+    height: 180px;
+    margin-right: 10px;
+    /*border: 1px solid #ccc;*/
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#eCard .studentCard .studentInfo {
+    width: 380px;
+    font-size: 9px;
+    margin-left: 0;
+}
+
+#eCard .margin-info { padding-top: 70px; }
+
+#eCard .studentCard .studentInfo h4 {
+    font-family: "Times New Roman";
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff0000;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#eCard .studentCard .studentInfo p {
+    font-family: UTM-HelvstIns;
+    color: #162240; /*162344*/
+    margin-bottom: 6px;
+}
+
+#eCard .studentCard .studentInfo p > span {
+    font-size: 17px;
+    padding-left: 4px;
+}
+
+#eCard .studentCard .studentInfo p .fullName { text-transform: uppercase; font-size: 20px; padding-left:10px !important; font-weight: 580; }
+#eCard .birthday {  padding-left:10px !important; font-weight: 480; }
+#eCard .school { display: inline-flex;  padding-left:10px !important; font-weight: 480; }
+#eCard .barcode, .qrcode {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+#eCard .barcode img {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    height: 32px;
+    /*max-width: 90%;*/
+}
+
+#eCard .qrcode img {
+    height: 60px;
+    position: relative;
+    float: right !important;
+    margin-right: 10px;
 }
 
 

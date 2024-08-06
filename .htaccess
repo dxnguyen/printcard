@@ -172,3 +172,8 @@ Options -Indexes
 </IfModule>
 
 #Header always set X-Frame-Options "ALLOWALL"
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "ql.ktxhcm.edu.vn"
+</IfModule>
+
+

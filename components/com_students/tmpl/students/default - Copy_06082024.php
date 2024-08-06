@@ -76,7 +76,6 @@
                                                                                                     value=""
                                                                                                     style="width: 100px; margin-right: 30px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
                     <button id="printBtn" class="btn btn-sm btn-danger" onclick="printDiv('printCard');//print();">In thẻ</button>
-                    <button id="viewECard" class="btn btn-sm btn-primary">Thẻ điện tử</button>
                 </p>
             </div>
             <div class="frameCard" id="printCard">
@@ -91,7 +90,7 @@
                         </div>
                         <div class="studentInfo margin-info">
                             <p class="pinfo"><span class="fullName"><?php echo $this->items['Name']; ?></span></p>
-                            <p class="pinfo"><span
+                            <p class="pinfo"> <span
                                         class="birthday"><?php echo $this->items['BDay'] . '/' . $this->items['BMonth'] . '/' . $this->items['BYear']; ?></span>
                             </p>
                             <p class="pinfo"><span class="school"><?php echo $schoolName; ?></span></p>
@@ -112,42 +111,6 @@
                 </div>
 
             </div>
-
-            <div class="frameCard" id="eCard" style="display: none;">
-                <div class="overlay"></div>
-                <div class="studentCard" id="studentCard">
-                    <div class="infobox">
-                        <div class="img-barcode contain-img-box">
-                            <div class="imgBox">
-                                <img id="draggable-image" src="<?php echo $studentImg; //URI::root().'uploads/svimg.jpg';  ?>" alt=""
-                                     title="<?php echo $this->items['IdCardNumber'] ?>"/>
-                            </div>
-                        </div>
-                        <div class="studentInfo margin-info">
-                            <p class="pinfo"><span class="label">Họ và tên:</span><span class="fullName"><?php echo $this->items['Name']; ?></span></p>
-                            <p class="pinfo"><span class="label">Ngày sinh:</span><span
-                                        class="birthday"><?php echo $this->items['BDay'] . '/' . $this->items['BMonth'] . '/' . $this->items['BYear']; ?></span>
-                            </p>
-                            <p class="pinfo"><span class="label">Trường/Khoa:</span><span class="school"><?php echo $schoolName; ?></span></p>
-                        </div>
-                    </div>
-                    <div class="codebox">
-                        <div class="img-barcode">
-                            <div class="barcode"><img
-                                        src="<?php echo URI::root() . 'uploads/barcode/' . $this->items['barcode']; ?>"
-                                        atl=""/>
-                            </div>
-                        </div>
-                        <div class="studentInfo">
-                            <div class="qrcode"><img src="<?php echo URI::root() . $this->items['qrcode']; ?>" atl=""/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <p class="text-center" style="margin-top: 20px;"><button id="exportCard" class="btn btn-danger">Tải về</button></p>
-
         </div>
     <?php else: ?>
         <div class="data-not-exist"><h4>Không có dữ liệu được tìm thấy trong hệ thống</h4></div>
@@ -182,7 +145,6 @@
 
         const frame = document.querySelector('.imgBox');
         const img = document.getElementById('draggable-image');
-        const zoomFactor = 0.1;
 
         let scale = 1;
         let posX = 0;
@@ -198,13 +160,13 @@
             const delta = Math.max(-1, Math.min(1, event.deltaY));
 
             if (delta > 0) {
-                zoomOut();
+                scale -= 0.1;
             } else {
-                zoomIn();
+                scale += 0.1;
             }
 
             // limit zoom
-            scale = Math.min(Math.max(1, scale), 2);
+            scale = Math.min(Math.max(0.5, scale), 2);
 
             // get mouse's new position with frame
             const rect = frame.getBoundingClientRect();
@@ -244,16 +206,6 @@
             img.style.cursor = 'move';
         });
 
-        function zoomIn() {
-            scale += zoomFactor;
-            img.style.transform = `scale(${scale})`;
-        }
-
-        function zoomOut() {
-            scale = Math.max(1, scale - zoomFactor);
-            img.style.transform = `scale(${scale})`;
-        }
-
     });
 
     // print
@@ -272,76 +224,35 @@
 
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
-
-<script type="text/javascript">
-    // script.js
-    //document.getElementById('exportCard').addEventListener('click', () => {
-    $(document).ready(function(){
-        $('#viewECard').click( function() {
-            $('#printCard').css('display', 'none');
-            $('#eCard').css('display', 'block');
-        });
-
-        $('#printBtn').click( function() {
-            $('#printCard').css('display', 'block');
-            $('#eCard').css('display', 'none');
-        });
-
-        $('#exportCard').click(function() {
-            downloadCard('eCard');
-        });
-    });
-
-    function downloadCard(contentID){
-        const content = document.getElementById(contentID);
-        const scale  = 4;
-        const images = content.getElementsByTagName('img');
-        const imagePromises = Array.from(images).map(img => {
-            return new Promise((resolve, reject) => {
-                if (img.complete) {
-                    resolve();
-                } else {
-                    img.onload = resolve;
-                    img.onerror = reject;
-                }
-            });
-        });
-
-        Promise.all(imagePromises).then(() => {
-            html2canvas(content, {
-                useCORS: true,
-                backgroundColor: null,
-                scale: scale,
-                /*width: content.offsetWidth * scale,
-                height: content.offsetHeight * scale,
-                scrollX: -window.scrollX,
-                scrollY: -window.scrollY*/
-            }).then(canvas => {
-                const imgData = canvas.toDataURL('image/png', 1.0);
-                const link = document.createElement('a');
-                link.href = imgData;
-                link.download = 'eCard.png';
-
-                setTimeout(() => {
-                    link.click();
-                }, 500);
-            }).catch(error => {
-                console.error('Error generating image:', error);
-            });
-        }).catch(error => {
-            console.error('Error loading images:', error);
+<script>
+    /*function onPrint() {
+        alert("Lệnh đang được thực hiện!");
+        //send request print to server
+        $apiUrl = '';
+        fetch($apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'event=print'
         });
     }
 
+    window.onbeforeprint = onPrint;*/
 </script>
 
+<?php
 
+    /*if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $event = $_POST['event'] ?? 'unknown';
+        file_put_contents('print_log.txt', "Event: $event, Time: " . date('Y-m-d H:i:s') . "\n", FILE_APPEND);
+    }*/
+
+?>
 <!-- Thêm thư viện html2canvas -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 
 <script>
-
 function exportToImage() {
     html2canvas(document.getElementById('printCard'), {
         useCORS: true,
