@@ -5,265 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88bb1df5-5e4b-4034-9dfe-f48fc5388276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/media/templates/site/studentcard/images/background_card.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/src/Controller/EcardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/src/Model/EcardModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/src/View/Ecard/HtmlView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default_filter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/ecard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/students/ecard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_menus/4fc74fe876614119a10faaf6f319b24a-cache-com_menus-b341951b461f061f6797af1c47ed4b21.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_menus/4fc74fe876614119a10faaf6f319b24a-cache-com_menus-b341951b461f061f6797af1c47ed4b21.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-4f13ac9d89bb779bb692cf5e24e87b3c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-761c3c7cbd1e4d28319a18b0e4e1113a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-7d8af19b8eecf432b470c411aa2e7fef.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-833b3ff4bbc1dc4a7fbf9419746b38a1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-9ac274809f5c14ec560c47ea85452a9e.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-b576788db79fa2997e48fa00ca920dcf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-cea18b07c6143978bee04a252055beac.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-f1344dccc2714617f26c531982e20176.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-108d63f92df4bd10892c6aaf3d8102d8.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-108d63f92df4bd10892c6aaf3d8102d8.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-9cac48c2aa146d6808d754b58cc0d97f.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-9cac48c2aa146d6808d754b58cc0d97f.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/com_templates/4fc74fe876614119a10faaf6f319b24a-cache-com_templates-25b361e66acf5ceddfd2f8ecb93cf993.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_templates/4fc74fe876614119a10faaf6f319b24a-cache-com_templates-25b361e66acf5ceddfd2f8ecb93cf993.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/language/en-GB/com_students.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/language/en-GB/com_students.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/language/en-GB/com_students.sys.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/language/en-GB/com_students.sys.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_students/src/Model/StudentsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/src/Model/StudentsModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inc/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/language/en-GB/com_students.ini" beforeDir="false" afterPath="$PROJECT_DIR$/language/en-GB/com_students.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media/templates/site/studentcard/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/templates/site/studentcard/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722476265_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722476653_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722476670_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722476712_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722477287_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722477289_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722477453_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722477828_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722477984_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722478292_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722481262_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722481291_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722481399_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722481403_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722481609_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722481977_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722482204_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722482384_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722482387_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722482388_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722482677_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722482679_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722482683_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722482913_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484146_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484149_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484156_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484161_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484358_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484386_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484389_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484485_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484488_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484496_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484593_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484600_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484604_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722484789_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485029_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485135_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485140_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485295_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485304_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485306_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485338_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485349_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485370_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485377_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722485379_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722486559_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722494475_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722494484_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722494500_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722494512_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722494520_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722494651_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722494759_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722494911_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495211_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495214_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495219_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495268_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495404_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495423_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495593_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495664_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495669_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722495762_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722496082_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722496178_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722496430_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722496605_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722496823_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722496826_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722496895_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722496907_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497086_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497100_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497215_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497335_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497379_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497446_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497563_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497565_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497720_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497724_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497729_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497816_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497870_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722497874_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722503355_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722503359_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722503378_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722503424_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722503556_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722503894_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722504417_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722504540_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505643_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505650_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505731_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505757_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505785_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505787_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505790_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505792_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505933_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722505965_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506052_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506064_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506180_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506503_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506579_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506703_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506723_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506726_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506729_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722506753_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722507151_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722507326_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722507333_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722507440_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722507526_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722507578_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722507647_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/barcode/1722507979_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722476265_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722476653_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722476670_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722476712_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722477287_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722477289_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722477453_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722477828_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722477984_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722478292_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722481262_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722481291_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722481399_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722481403_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722481609_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722481977_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722482204_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722482384_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722482387_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722482388_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722482677_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722482679_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722482683_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722482913_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484146_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484149_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484156_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484161_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484358_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484386_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484389_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484485_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484488_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484496_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484593_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484600_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484604_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722484789_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485029_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485135_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485140_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485295_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485304_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485306_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485338_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485349_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485370_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485377_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722485379_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722486559_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722494475_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722494484_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722494500_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722494512_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722494520_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722494651_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722494759_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722494911_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495211_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495214_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495219_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495268_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495404_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495423_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495593_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495664_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495669_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722495762_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722496082_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722496178_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722496430_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722496605_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722496823_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722496826_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722496895_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722496907_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497086_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497100_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497215_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497335_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497379_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497446_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497563_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497565_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497720_062201002346.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497724_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497729_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497816_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497870_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722497874_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722503355_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722503359_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722503378_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722503424_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722503556_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722503894_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722504417_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722504540_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505643_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505650_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505731_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505757_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505785_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505787_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505790_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505792_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505933_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722505965_060305002214.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506052_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506064_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506180_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506503_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506579_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506703_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506723_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506726_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506729_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722506753_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722507151_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722507326_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722507333_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722507440_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722507526_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722507578_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722507647_072305004426.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/qrcode/1722507979_072305004426.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +85,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/xampp8/htdocs/printcard/media/templates/site/studentcard/images",
+    "last_opened_file_path": "D:/xampp8/htdocs/printcard/components/com_students/tmpl/ecard",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -319,10 +96,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp8\htdocs\printcard\media\templates\site\studentcard\images" />
-      <recent name="D:\xampp8\htdocs\printcard\components\com_students\tmpl\students" />
-      <recent name="D:\xampp8\htdocs\printcard\media\templates\site\studentcard\css" />
-      <recent name="D:\xampp8\htdocs\printcard\inc" />
+      <recent name="D:\xampp8\htdocs\printcard\components\com_students\tmpl\ecard" />
+      <recent name="D:\xampp8\htdocs\printcard\components\com_students\src\Model" />
+      <recent name="D:\xampp8\htdocs\printcard\components\com_students\src\Controller" />
+      <recent name="D:\xampp8\htdocs\printcard\components\com_students\tmpl" />
+      <recent name="D:\xampp8\htdocs\printcard\components\com_students\src\View" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -351,11 +129,24 @@
       <workItem from="1722557939383" duration="15541000" />
       <workItem from="1722645920763" duration="4524000" />
       <workItem from="1722816673155" duration="4388000" />
-      <workItem from="1722903369473" duration="33206000" />
+      <workItem from="1722903369473" duration="33486000" />
+      <workItem from="1722983653400" duration="1998000" />
+      <workItem from="1722989901727" duration="27752000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/components/com_students/src/View/Ecard/HtmlView.php</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

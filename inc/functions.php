@@ -518,3 +518,14 @@ function checkWeeks($startdate , $enddate){
 
         return $filename;
     }
+
+    // Sử dụng thư viện JWT (như firebase/php-jwt)
+    function encryptcode() {
+        //use \Firebase\JWT\JWT;
+        $data = array();
+        $key  = 'ttqlktxcnttdl2024';
+        $payload = ['data' => $data];
+        $jwt  = JWT::encode($payload, $key);
+
+        $decoded = JWT::decode($jwt, $key, ['HS256']);
+    }

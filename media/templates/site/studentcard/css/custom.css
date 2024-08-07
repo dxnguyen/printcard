@@ -4,7 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-
+header .brand-logo img { max-width: 300px;}
 header.container-header{ background-color: rgb(61, 81, 140) !important; background-image: none !important; }
 .header-right-box{ width:100px; position: relative; float: right; padding:30px; text-align: center; }
 .header-right-box .user-state{ position: absolute; bottom:0px; font-size: 20px; color:#ccc; }
@@ -169,13 +169,14 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
 }
 
 #eCard .infobox { width:100%; position: relative; overflow: hidden; display: flex; height: 210px; clear: both; }
-#eCard .codebox { width: 100%; position: relative; bottom: 0px; display: flex; margin-top: -1mm; }
+#eCard .codebox { width: 100%; position: relative; bottom: 0px; display: flex; margin-top: -1mm; z-index: 4; }
 #eCard .img-barcode {
     position: relative;
+    overflow: hidden;
     width: 200px;
     display: flex;
 }
-#eCard .contain-img-box { align-items: center; }
+#eCard .contain-img-box { align-items: center;z-index: 1; }
 
 #eCard .studentCard .imgBox {
     position: relative;
@@ -232,6 +233,7 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
     margin: 0 auto;
     display: flex;
     height: 32px;
+    z-index: 9;
     /*max-width: 90%;*/
 }
 
@@ -241,8 +243,10 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
     float: right !important;
     margin-right: 10px;
 }
-
-
+#eCard #isAvailable{ position: absolute; bottom: 5px;right: 140px;}
+#eCard #isAvailable i.userAvailable{ font-size: 60px; color: #3D9C35; }
+#eCard #isAvailable i.userUnAvailable{ font-size: 60px; color: #ff0000; }
+#eCardSp { display: none;}
 /*****/
 
 /*@media print {
@@ -272,7 +276,19 @@ table.svinfo tr .sv-name{ background-color: inherit !important;}
 
 @media (max-width: 576px) {
     .container-header .navbar-brand{ padding-top:0 !important; }
-    .container-header .navbar-brand a img{ max-width:45%; }
+    .container-header .navbar-brand a img{ /*max-width:70%;*/ }
     .footer .grid-child{ padding:0.5rem !important; }
     .js-stools-container-bar .btn-toolbar{ flex-wrap: unset !important; }
+
+    .text-sitename{ display: none;}
+    #cardBox { width:auto !important; padding-bottom: 120px;}
+    #eCard { display: none;}
+    #eCardSp { display: block;background: url("../images/background_card.png") center no-repeat; background-size: cover; border: none;}
+    #eCardSp .controlbox p { margin-bottom: 0 !important;}
+    #eCardSp .fullName, #eCardSp .birthday, #eCardSp .school { padding-left:4px !important; }
+    #eCardSp .studentCard .studentInfo p > span.label { font-size: 8px; color: #227FC2; font-family: Tahoma; font-weight: 520; }
+    #eCardSp #isAvailable{ position: absolute; bottom: 0px;right: 90px;}
+    #eCardSp #isAvailable i.userAvailable{ font-size: 30px; color: #3D9C35; }
+    #eCardSp #isAvailable i.userUnAvailable{ font-size: 30px; color: #ff0000; }
+
 }

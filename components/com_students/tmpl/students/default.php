@@ -23,6 +23,7 @@
     HTMLHelper::_('formbehavior.chosen', 'select');
 
     $user = Factory::getApplication()->getIdentity();
+    $userGroups = $user->get('groups');
     $userId = $user->get('id');
     $listOrder = $this->state->get('list.ordering');
     $listDirn = $this->state->get('list.direction');
@@ -35,6 +36,15 @@
     // Import CSS
     $wa = $this->document->getWebAssetManager();
     $wa->useStyle('com_students.list');
+
+    $app = Factory::getApplication();
+    $redirectCondition = true; // Set your condition here
+
+    $registerUser = in_array(2, $userGroups);
+    if ($registerUser) {
+        $url = Route::_('index.php?option=com_students&view=students&layout=ecard');
+        $app->redirect($url);
+    }
 ?>
 
 <form action="<?php echo htmlspecialchars(Uri::getInstance()->toString()); ?>" method="post"
@@ -46,7 +56,6 @@
     <input type="hidden" name="task" value=""/>
     <?php echo HTMLHelper::_('form.token'); ?>
 </form>
-<!--<div style="width: 100%; text-align: center; margin-bottom: 40px;"><img src="<?php /*URI::root()*/?>uploads/thesv.jpg" style="width: 85.60mm; margin-bottom: 40px; margin: 0 auto;"></div>-->
 <?php
     $pathImg = "https://ql.ktxhcm.edu.vn/SharedData/HinhSV/";
     if ($this->items):
@@ -76,7 +85,7 @@
                                                                                                     value=""
                                                                                                     style="width: 100px; margin-right: 30px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
                     <button id="printBtn" class="btn btn-sm btn-danger" onclick="printDiv('printCard');//print();">In thẻ</button>
-                    <button id="viewECard" class="btn btn-sm btn-primary">Thẻ điện tử</button>
+                    <a href="<?php echo Route::_('index.php?option=com_students&view=students&layout=ecard');?>"><button id="" class="btn btn-sm btn-primary">Thẻ điện tử</button></a></p>
                 </p>
             </div>
             <div class="frameCard" id="printCard">
@@ -112,41 +121,6 @@
                 </div>
 
             </div>
-
-            <div class="frameCard" id="eCard" style="display: none;">
-                <div class="overlay"></div>
-                <div class="studentCard" id="studentCard">
-                    <div class="infobox">
-                        <div class="img-barcode contain-img-box">
-                            <div class="imgBox">
-                                <img id="draggable-image" src="<?php echo $studentImg; //URI::root().'uploads/svimg.jpg';  ?>" alt=""
-                                     title="<?php echo $this->items['IdCardNumber'] ?>"/>
-                            </div>
-                        </div>
-                        <div class="studentInfo margin-info">
-                            <p class="pinfo"><span class="label">Họ và tên:</span><span class="fullName"><?php echo $this->items['Name']; ?></span></p>
-                            <p class="pinfo"><span class="label">Ngày sinh:</span><span
-                                        class="birthday"><?php echo $this->items['BDay'] . '/' . $this->items['BMonth'] . '/' . $this->items['BYear']; ?></span>
-                            </p>
-                            <p class="pinfo"><span class="label">Trường/Khoa:</span><span class="school"><?php echo $schoolName; ?></span></p>
-                        </div>
-                    </div>
-                    <div class="codebox">
-                        <div class="img-barcode">
-                            <div class="barcode"><img
-                                        src="<?php echo URI::root() . 'uploads/barcode/' . $this->items['barcode']; ?>"
-                                        atl=""/>
-                            </div>
-                        </div>
-                        <div class="studentInfo">
-                            <div class="qrcode"><img src="<?php echo URI::root() . $this->items['qrcode']; ?>" atl=""/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <p class="text-center" style="margin-top: 20px;"><button id="exportCard" class="btn btn-danger">Tải về</button></p>
 
         </div>
     <?php else: ?>
@@ -278,14 +252,19 @@
     // script.js
     //document.getElementById('exportCard').addEventListener('click', () => {
     $(document).ready(function(){
+        $('#exportCard').hide();
         $('#viewECard').click( function() {
-            $('#printCard').css('display', 'none');
-            $('#eCard').css('display', 'block');
+            $('#printCard').hide();
+            $('#eCard').show();
+            $('#exportCard').show();
         });
 
         $('#printBtn').click( function() {
-            $('#printCard').css('display', 'block');
-            $('#eCard').css('display', 'none');
+            /*$('#printCard').css('display', 'block');
+            $('#eCard').css('display', 'none');*/
+            $('#printCard').show();
+            $('#eCard').hide();
+            $('#exportCard').hide();
         });
 
         $('#exportCard').click(function() {
