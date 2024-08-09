@@ -187,8 +187,8 @@ class EcardModel extends ListModel
 	{
 		$db          = $this->getDbo();
 		$search      = $this->getState('filter.search');
-		$studentCode = !empty($_GET['code']) ? $_GET['code'] : '';
-		$code    = !empty($search) ? $db->escape($search, true) : $studentCode;
+        $code = !empty($_GET['code']) ? $_GET['code'] : '';
+		//$code    =  $studentCode;
 		$domain  = 'http://apihealthcare.ktxhcm.edu.vn';
 		$api_key = getInfoweb()->web_api;
 		$token   = @$this->getTokenApi(trim($api_key));

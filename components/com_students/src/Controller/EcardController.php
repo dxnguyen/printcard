@@ -42,4 +42,22 @@ class EcardController extends FormController
 	{
 		return parent::getModel($name, $prefix, array('ignore_request' => true));
 	}
+
+    public function checkViewCard() {
+        $code      = $_GET['code'];
+        $app       = Factory::getApplication();
+        $session   = Factory::getSession();
+        $formData  = $app->input->get('jform', array(), 'array');
+        $birthday  = $formData['birthday'];
+        $sBirthday = $session->get('sBirthday');
+        if (trim($birthday) == $sBirthday) {
+            $session->set('canViewECard', $code);
+            $ecardUrl = URI::root().'e-card?code='.base64_decode($code);
+            $this->setRedirect($ecardUrl);
+        } else {
+            $app->enqueueMessage('Ngày sinh bạn nhập chưa đúng! Vui lòng thử lại', 'error');
+            $this->setRedirect($_SERVER['REQUEST_URI']);
+        }
+
+    }
 }

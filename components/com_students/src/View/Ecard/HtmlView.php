@@ -15,6 +15,8 @@ defined('_JEXEC') or die;
 use \Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
 use \Joomla\CMS\Factory;
 use \Joomla\CMS\Language\Text;
+use \Joomla\CMS\Router\Route;
+use \Joomla\CMS\Uri\Uri;
 
 /**
  * View class for a list of Students.
@@ -44,15 +46,32 @@ class HtmlView extends BaseHtmlView
 	{
 		$app = Factory::getApplication();
 
+        $session = Factory::getSession();
 		$this->state = $this->get('State');
 		$this->items = $this->get('Items');
+        $sViewECard = @$session->get('canViewECard');
+
+        if (empty($_GET['layout'])) {
+            if ($sViewECard != base64_encode(@$this->items['IdCardNumber'])) {
+                $bday = (int)$this->items['BDay'];
+                $bmonth = (int)$this->items['BMonth'];
+                $bday = ($bday > 0 && $bday <= 9) ? '0' . $bday : $bday;
+                $bmonth = ($bmonth > 0 && $bmonth <= 9) ? '0' . $bmonth : $bmonth;
+                $byear = (int)$this->items['BYear'];
+                $birthday = $bday . $bmonth . $byear;
+                $session->set('sBirthday', $birthday);
+                $IdCardNumber = base64_encode($this->items['IdCardNumber']);
+                $checkViewUrl = URI::root() . 'e-card?layout=checkview&code=' . $IdCardNumber;
+                $app->redirect($checkViewUrl);
+            }
+        }
+
 		$this->pagination = $this->get('Pagination');
 		$this->params = $app->getParams('com_students');
 		$this->filterForm = $this->get('FilterForm');
 		$this->activeFilters = $this->get('ActiveFilters');
 
-        //qrcode 
-        
+
 		// Check for errors.
 		if (count($errors = $this->get('Errors')))
 		{

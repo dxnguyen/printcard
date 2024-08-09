@@ -85,7 +85,7 @@
                                                                                                     value=""
                                                                                                     style="width: 100px; margin-right: 30px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
                     <button id="printBtn" class="btn btn-sm btn-danger" onclick="printDiv('printCard');//print();">In thẻ</button>
-                    <a href="<?php echo Route::_('index.php?option=com_students&view=students&layout=ecard');?>"><button id="" class="btn btn-sm btn-primary">Thẻ điện tử</button></a></p>
+                    <!--<a href="<?php /*echo Route::_('index.php?option=com_students&view=students&layout=ecard');*/?>"><button id="" class="btn btn-sm btn-primary">Thẻ điện tử</button></a></p>-->
                 </p>
             </div>
             <div class="frameCard" id="printCard">

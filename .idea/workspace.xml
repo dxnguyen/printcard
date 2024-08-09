@@ -5,42 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88bb1df5-5e4b-4034-9dfe-f48fc5388276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/com_students/src/Controller/EcardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/com_students/src/Model/EcardModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/com_students/src/View/Ecard/HtmlView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default_filter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/ecard.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/students/ecard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/checkview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/com_menus/4fc74fe876614119a10faaf6f319b24a-cache-com_menus-b341951b461f061f6797af1c47ed4b21.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_menus/4fc74fe876614119a10faaf6f319b24a-cache-com_menus-b341951b461f061f6797af1c47ed4b21.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-4f13ac9d89bb779bb692cf5e24e87b3c.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-761c3c7cbd1e4d28319a18b0e4e1113a.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-7d8af19b8eecf432b470c411aa2e7fef.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-833b3ff4bbc1dc4a7fbf9419746b38a1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-9ac274809f5c14ec560c47ea85452a9e.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-b576788db79fa2997e48fa00ca920dcf.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-cea18b07c6143978bee04a252055beac.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_modules/4fc74fe876614119a10faaf6f319b24a-cache-com_modules-f1344dccc2714617f26c531982e20176.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-108d63f92df4bd10892c6aaf3d8102d8.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-108d63f92df4bd10892c6aaf3d8102d8.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-9cac48c2aa146d6808d754b58cc0d97f.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-9cac48c2aa146d6808d754b58cc0d97f.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_templates/4fc74fe876614119a10faaf6f319b24a-cache-com_templates-25b361e66acf5ceddfd2f8ecb93cf993.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_templates/4fc74fe876614119a10faaf6f319b24a-cache-com_templates-25b361e66acf5ceddfd2f8ecb93cf993.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/language/en-GB/com_students.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/language/en-GB/com_students.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/language/en-GB/com_students.sys.ini" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/language/en-GB/com_students.sys.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/com_students/src/Model/StudentsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/src/Model/StudentsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/mod_footer/4fc74fe876614119a10faaf6f319b24a-cache-mod_footer-29a55767de5da3b623401a2a2d69019f.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/mod_footer/4fc74fe876614119a10faaf6f319b24a-cache-mod_footer-29a55767de5da3b623401a2a2d69019f.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrator/cache/mod_footer/4fc74fe876614119a10faaf6f319b24a-cache-mod_footer-f58642726c0bef8d9ac4683ce0daede4.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/mod_footer/4fc74fe876614119a10faaf6f319b24a-cache-mod_footer-f58642726c0bef8d9ac4683ce0daede4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_students/src/Controller/EcardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/src/Controller/EcardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_students/src/Model/EcardModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/src/Model/EcardModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_students/src/View/Ecard/HtmlView.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/src/View/Ecard/HtmlView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/language/en-GB/com_students.ini" beforeDir="false" afterPath="$PROJECT_DIR$/language/en-GB/com_students.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/templates/site/studentcard/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/templates/site/studentcard/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/printcard_07082024.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/printcard_db.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/printcard_source.zip" beforeDir="false" afterPath="$PROJECT_DIR$/printcard_source.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,22 +57,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/xampp8/htdocs/printcard/components/com_students/tmpl/ecard",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/xampp8/htdocs/printcard/components/com_students/tmpl/ecard&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xampp8\htdocs\printcard\components\com_students\tmpl\ecard" />
@@ -132,6 +111,9 @@
       <workItem from="1722903369473" duration="33486000" />
       <workItem from="1722983653400" duration="1998000" />
       <workItem from="1722989901727" duration="27752000" />
+      <workItem from="1723076559052" duration="16340000" />
+      <workItem from="1723155053490" duration="3065000" />
+      <workItem from="1723163516385" duration="9389000" />
     </task>
     <servers />
   </component>
