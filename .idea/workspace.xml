@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88bb1df5-5e4b-4034-9dfe-f48fc5388276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/checkview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrator/cache/com_menus/4fc74fe876614119a10faaf6f319b24a-cache-com_menus-b341951b461f061f6797af1c47ed4b21.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_menus/4fc74fe876614119a10faaf6f319b24a-cache-com_menus-b341951b461f061f6797af1c47ed4b21.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-108d63f92df4bd10892c6aaf3d8102d8.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-108d63f92df4bd10892c6aaf3d8102d8.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-9cac48c2aa146d6808d754b58cc0d97f.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/com_plugins/4fc74fe876614119a10faaf6f319b24a-cache-com_plugins-9cac48c2aa146d6808d754b58cc0d97f.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/mod_footer/4fc74fe876614119a10faaf6f319b24a-cache-mod_footer-29a55767de5da3b623401a2a2d69019f.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/mod_footer/4fc74fe876614119a10faaf6f319b24a-cache-mod_footer-29a55767de5da3b623401a2a2d69019f.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrator/cache/mod_footer/4fc74fe876614119a10faaf6f319b24a-cache-mod_footer-f58642726c0bef8d9ac4683ce0daede4.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrator/cache/mod_footer/4fc74fe876614119a10faaf6f319b24a-cache-mod_footer-f58642726c0bef8d9ac4683ce0daede4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/com_students/src/Controller/EcardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/src/Controller/EcardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/com_students/src/Model/EcardModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/src/Model/EcardModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/com_students/src/View/Ecard/HtmlView.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/src/View/Ecard/HtmlView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/tmpl/ecard/default.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/com_students/tmpl/students/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/printcard_07082024.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printcard_db.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/printcard_source.zip" beforeDir="false" afterPath="$PROJECT_DIR$/printcard_source.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +73,21 @@
       <recent name="D:\xampp8\htdocs\printcard\components\com_students\src\View" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="printcard" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="printcard" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -113,7 +119,10 @@
       <workItem from="1722989901727" duration="27752000" />
       <workItem from="1723076559052" duration="16340000" />
       <workItem from="1723155053490" duration="3065000" />
-      <workItem from="1723163516385" duration="9389000" />
+      <workItem from="1723163516385" duration="15234000" />
+      <workItem from="1723250025672" duration="8820000" />
+      <workItem from="1723344438343" duration="2351000" />
+      <workItem from="1723427841884" duration="8463000" />
     </task>
     <servers />
   </component>

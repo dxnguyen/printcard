@@ -80,6 +80,10 @@
                                                                                                                               id="textFullname"
                                                                                                                               value="12"
                                                                                                                               style="width: 50px; margin-right: 20px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
+                    <span class="control-text">Top:</span> <input type="number"
+                                                                                 id="textFullnameTop"
+                                                                                 value="30"
+                                                                                 style="width: 50px; margin-right: 20px; border: 1px solid #ccc; border-radius: 5px;color: rgba(11,16,22,0.92);"/>
                     <span class="control-text" style="margin-left: 20px;">Mã hình SV:</span> <input type="text"
                                                                                                     id="textImgCode"
                                                                                                     value=""
@@ -92,7 +96,7 @@
                 <div class="overlay"></div>
                 <div class="studentCard" id="studentCard">
                     <div class="infobox">
-                        <div class="img-barcode contain-img-box">
+                        <div class="img-barcode contain-img-box" id="containImgBox">
                             <div class="imgBox">
                                 <img id="draggable-image" src="<?php echo $studentImg ?>" alt=""
                                      title="<?php echo $this->items['IdCardNumber'] ?>"/>
@@ -136,6 +140,12 @@
             $('.fullName').css('font-size', fontFullname + 'px');
         });
 
+        //set font size
+        $('#textFullnameTop').change(function () {
+            var paddingTopFullname = $(this).val();
+            $('.margin-info').css('padding-top', paddingTopFullname + 'px');
+        });
+
         $('#textImgCode').change(function () {
             var textImgCode = $(this).val();
 
@@ -155,7 +165,9 @@
         // process zoom image
 
         const frame = document.querySelector('.imgBox');
-        const img = document.getElementById('draggable-image');
+        const img   = document.getElementById('draggable-image');
+        const step  = 1;
+        const container  = document.getElementById('containImgBox');
         const zoomFactor = 0.1;
 
         let scale = 1;
@@ -218,6 +230,43 @@
             img.style.cursor = 'move';
         });
 
+        //move key
+
+
+        // Di chuyển bằng phím mũi tên
+        /*// Thiết lập vị trí ban đầu cho hình ảnh
+        img.style.left = `${posX}px`;
+        img.style.top = `${posY}px`;*/
+
+        // Di chuyển bằng phím mũi tên
+        document.addEventListener('keydown', (e) => {
+            switch (e.key) {
+                case 'ArrowUp':
+                    e.preventDefault();
+                    posY = Math.max(-1, posY - step);
+                    break;
+                case 'ArrowDown':
+                    e.preventDefault();
+                    posY = Math.min(container.clientHeight - img.offsetHeight, posY + step);
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    posX = Math.max(-1, posX - step);
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    posX = Math.min(container.clientWidth - img.offsetWidth, posX + step);
+                    break;
+            }
+            updatePosition();
+        });
+
+        function updatePosition() {
+            img.style.transform = `scale(${scale}) translate(${posX}px, ${posY}px)`;
+            /*img.style.left = `${posX}px`;
+            img.style.top = `${posY}px`;*/
+        }
+
         function zoomIn() {
             scale += zoomFactor;
             img.style.transform = `scale(${scale})`;
@@ -260,8 +309,6 @@
         });
 
         $('#printBtn').click( function() {
-            /*$('#printCard').css('display', 'block');
-            $('#eCard').css('display', 'none');*/
             $('#printCard').show();
             $('#eCard').hide();
             $('#exportCard').hide();
@@ -314,6 +361,46 @@
     }
 
 </script>
+
+<script>
+    /*window.onbeforeprint = function() {
+        console.log('prepare print'); return false;
+        localStorage.setItem('printStart', new Date().toISOString());
+        $urlApi = 'index.php?option=com_students&task=Students.saveLog';
+    };*/
+
+    /*window.onafterprint = function() {
+        var printStart = localStorage.getItem('printStart');
+
+        console.log('Print started at:', printStart);
+        localStorage.removeItem('printStart');
+    };*/
+
+    /*function onPrint() {
+        alert("Lệnh đang được thực hiện!");
+        //send request print to server
+        $apiUrl = 'index.php?option=com_students&task=';
+        fetch($apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'event=print'
+        });
+    }
+
+    window.onbeforeprint = onPrint;*/
+</script>
+
+<?php
+
+    /*if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $event = $_POST['event'] ?? 'unknown';
+        file_put_contents('print_log.txt', "Event: $event, Time: " . date('Y-m-d H:i:s') . "\n", FILE_APPEND);
+    }*/
+
+?>
+
 
 
 <!-- Thêm thư viện html2canvas -->
